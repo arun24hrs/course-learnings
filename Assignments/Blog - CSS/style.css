@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+IS:wght@100..400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  width: 400px;
+  border-radius: 20px;
+}
+
+iframe {
+  width: 600px;
+  border-radius: 20px;
+}
+
+/* ============Header ========= */
+
+#hero {
+  color: #102c57;
+  padding: 30px;
+  animation: slideIn 1.5s ease-out;
+  background: url(https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?w=360);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0.5;
+    margin-left: -150px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+#hero h1 {
+  font-size: 40px;
+  margin-bottom: 5px;
+  font-family: cursive;
+}
+
+#hero p {
+  margin-left: 250px;
+  font-family: "Playwrite IS";
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 20px;
+  background-color: #1679ab;
+  position: sticky;
+  top: 0px;
+  margin-bottom: 50px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffcbcb;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #fff;
+  transform: scale(1.2);
+  transition: 0.6s;
+}
+
+h2 {
+  text-align: center;
+  padding: 20px;
+  color: #102c57;
+  margin-top: 50px;
+  font-size: 28px;
+  font-family: cursive;
+}
+
+h3 {
+  padding: 20px 20px 20px 0px;
+  color: #102c57;
+  font-size: 20px;
+  font-family: cursive;
+}
+
+
+section {
+  width: 90%;
+  text-align: justify;
+  margin: auto;
+}
+
+article{
+    font-family: "Playwrite IS";
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    border: 1px solid #102c57;
+  padding: 20px;
+}
+
+/* ========== Blog Post Section ========== */
+
+#about-blog>article>h2 {
+  margin-top: 0px
+}
+
+
+
+/* =============== ABOUT ARTICLE ============== */
+
+#about-wraper{
+  padding: 30px
+}
+
+#about-wraper > img {
+  float: left;
+  width: 250px;
+  margin: 10px 20px 10px 10px;
+}
+
+#about-article {
+  font-size: 16px;
+  line-height: 40px;
+}
+
+
+/* ========= CONTACT SECTION ========= */
+
+#contact {
+  width: 100%;
+  background-color: #ffd8d8;
+  padding: 10px 0px 50px 0px;
+  color: #146791;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.container p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #102c57;
+  color: #ffcccc;
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.social-icons{
+  width: 30px;
+}
+
+.social-flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-flex a {
+  text-decoration: none;
+  color: #1679ab;
+  font-size: 18px;
+}
+
+.social-flex a:hover {
+  color: #102c57;
+  transform: scale(1.2);
+  transition: transform 0.6s;
+}
+
+#socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 20px;
+}
+
+#socialLinks li {
+  list-style: none;
+}
+
+form {
+  border: 3px solid #102c57;
+  width: 500px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+label{
+  display: inline-block;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+input{
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+textarea{
+  width: 100%;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+#submit-btn {
+  background-color: #1679ab;
+  color: #ffcbcb;
+  border: none;
+  padding: 10px;
+}
+
+#submit-btn:hover {
+  background-color: #102c57;
+  color: #fff;
+  transition: 0.5s;
+  border: none;
+}
+
+
+
+
+
+/* ======== MEDIA QUERIES ========= */
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  nav{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  iframe {
+    width:100%
+  }
+
+  img{
+    width: 100%;
+  }
+
+  form{
+    width: 100%;
+  }
+
+  #hero p {
+    margin-left: 50px;
+}
+
+#socialLinks {
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+#hr-tag{
+  width: auto;
+}
+
+#hero h1 {
+  font-size: 35px;
+}
+
+h2{
+  font-size: 22px;
+margin: 0px;
+}
+
+h3{
+  font-size: 18px;
+}
+
+article{
+  font-size: 12px;
+  padding: 10px;
+}
+
+#about-wraper {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#about-wraper > img {
+  width: 200px;
+  margin: 5px;
+  display: block;
+}
+
+#about-article {
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+}
