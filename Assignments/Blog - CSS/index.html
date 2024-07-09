@@ -30,12 +30,15 @@
       </div>
     </header>
     <!-- Navbar -->
-    <nav>
-      <a href="#music">Music</a>
-      <a href="#learnings">My Learnings</a>
-      <a href="#ai-tech">AI Tech</a>
-      <a href="#about">About Me</a>
-      <a href="#contact">Contact</a>
+    <nav id="menu">
+      <!-- <h4 id="logo">My Corner</h4> -->
+      <img onclick="handleMenuOpen()" src="./images/hamburger-menu.png" id="menu-open" alt="hamburger menu">
+      <img onclick="handleMenuClose()" src="./images/cross.png" id="menu-close" alt="cross icon">
+      <a class="nav-links" href="#music">Music</a>
+      <a class="nav-links" href="#learnings">My Learnings</a>
+      <a class="nav-links" href="#ai-tech">AI Tech</a>
+      <a class="nav-links" href="#about">About Me</a>
+      <a class="nav-links" href="#contact">Contact</a>
     </nav>
 
     <!-- About the Blog -->
@@ -573,7 +576,7 @@
           </ul>
 
           <br />
-          <hr id="hr-tag" width="1000px" />
+          <hr id="hr-tag" width="100%" />
           <br />
           <h3>Drop me a quick message:</h3>
           <form action="">
@@ -600,4 +603,25 @@
       <footer id="footer">Made with love by Arun Kr. Rana &copy; 2024</footer>
     </main>
   </body>
+
+  <script>
+    let open = document.getElementById("menu-open");
+    let close = document.getElementById("menu-close");
+    let menu = document.querySelectorAll(".nav-links");
+    const handleMenuOpen = () => {
+      open.style.display = "none";
+      close.style.display = "block";
+      menu.forEach((el)=> {
+        el.style.display = "block";
+      })
+    };
+
+    const handleMenuClose = () => {
+      open.style.display = "block";
+      close.style.display = "none";
+      menu.forEach((el)=> {
+        el.style.display = "none";
+      })
+    }
+  </script>
 </html>
