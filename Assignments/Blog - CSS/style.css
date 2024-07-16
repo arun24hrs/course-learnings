@@ -115,6 +115,7 @@ article{
     border-radius: 20px;
     border: 1px solid #102c57;
   padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 /* ========== Blog Post Section ========== */
@@ -140,6 +141,9 @@ article{
 #about-article {
   font-size: 16px;
   line-height: 40px;
+  background-color: #1679ab;
+  color: #ffcccc;
+  padding: 20px;
 }
 
 
