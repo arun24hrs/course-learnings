@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.btn {
+  @apply py-1 pl-10 px-7 rounded-3xl duration-300
+}
+
 input[type="checkbox"].toggle {
     opacity: 0;
     position: absolute;

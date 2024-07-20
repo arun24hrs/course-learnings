@@ -11,6 +11,15 @@ module.exports = {
         40: '#d62828',
         45: '#003049'
         }
+      },
+      animation: {
+        scaleup: 'scaleup 1s ease-in-out',
+      },
+      keyframes:{
+        scaleup: {
+          '0%': { transform: 'rotate(0deg)'},
+          '100%': {transform: 'rotate(100deg)'}
+        }
       }
     },
   },

@@ -18,16 +18,15 @@
       href="./images/favicon/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="output.css" />
     <title>Arun Kr. Rana | Portfolio</title>
   </head>
   <body class="w-full">
-
     <!-- ========= NAVBAR ========= -->
 
     <nav class="flex flex-col bg-theme-45 p-2">
       <div class="flex justify-between align-middle">
-        <img class="w-36" src="./images/logo.png" alt="logo" />
+        <img class="w-32" src="./images/logo.png" alt="logo" />
         <div id="checkbox" class="flex justify-center align-middle">
           <input type="checkbox" id="check1" class="toggle" />
           <label for="check1"></label>
@@ -35,13 +34,13 @@
         <img
           src="./images/icons8-cross-50.png"
           id="menuClose"
-          class="size-8 m-3 hidden"
+          class="size-7 m-3 hidden"
           onclick="handleMenuClose()"
           alt="close menu icon"
         /><img
           src="./images/icons8-hamburger-menu-50.png"
           id="menuOpen"
-          class="size-8 m-3"
+          class="size-7 m-3"
           onclick="handleMenuOpen()"
           alt="hamburger menu icon"
         />
@@ -85,10 +84,131 @@
     <!-- ========= HEADER ========= -->
 
     <header>
-      <div></div>
-      <div></div>
+      <div class="h-screen bg-theme-10 flex flex-col items-center pt-12">
+        <img class="w-3/5 rounded-3xl" src="./images/intro img.gif" alt="" />
+        <h1 class="text-2xl font-bold text-theme-45 text-center mt-8">
+          Hi👋🏼, I am Arun Kr. Rana
+        </h1>
+        <h2
+          class="text-l font-bold text-theme-40 text-center mt-4 before:content-['<'] after:content-['/>']"
+        >
+          A Full Stack Web Developer
+        </h2>
+        <div class="flex gap-6 mt-7">
+          <a
+            class="hover:scale-125 duration-300"
+            href="mailto:2017arun.rana@gmail.com"
+            target="_blank"
+          >
+            <img
+              class="size-10"
+              src="./images/gmail-logo-60.png"
+              alt="gmail icon"
+            />
+          </a>
+          <a
+            class="hover:scale-125 duration-300"
+            href="tel:+91-9868494572"
+            target="_blank"
+            ><img class="size-10" src="./images/phone-60.png" alt="phone icon"
+          /></a>
+          <a
+            class="hover:scale-125 duration-300"
+            href="https://github.com/arun24hrs"
+            target="_blank"
+            ><img
+              class="size-10"
+              src="./images/github-60.png"
+              alt="github icon"
+          /></a>
+          <a
+            class="hover:scale-125 duration-300"
+            href="https://www.linkedin.com/in/arun-kr-rana/"
+            target="_blank"
+            ><img
+              class="size-10"
+              src="./images/linkedin-60.png"
+              alt="linkedin icon"
+          /></a>
+        </div>
+        <img
+          class="mt-12 animate-bounce size-8 bg-black rounded-full"
+          src="./images/scroll-down.png"
+          alt="circled-down-2"
+        />
+        <p class="text-theme-30 text-xs drop-shadow-lg">Scroll Down</p>
+      </div>
     </header>
 
+    <!-- ========== HEADER ENDS =========== -->
+
+    <!-- ========== ABOUT SECTION ========== -->
+
+    <section id="about">
+      <div class="bg-theme-45 h-auto p-8 text-center">
+        <h2 class="text-theme-10 text-3xl text-center m-8">About Me</h2>
+        <img
+          class="rounded-3xl mb-5"
+          src="./images/dp.jpg"
+          alt="profile image"
+        />
+        <p class="text-theme-20 mt-5 text-justify first-letter:text-4xl">
+          An enthusiastic full stack web developer possessing skills of
+          developing websites using JavaScript, React.js, Next.js, TypeScript,
+          Redux, HTML and CSS for frontend development and Node.js, Express.js,
+          MongoDB for backend development. Constantly learning and honing
+          problem solving skills to be a more efficient resource. Looking for an
+          opportunity to build career as full-stack developer and put efforts in
+          achieving organizational goals.
+        </p>
+        <button
+          class="mt-8 bg-theme-30 btn text-theme-45 hover:bg-theme-40 hover:text-theme-20"
+        >
+          Resume<svg
+              width="512"
+              height="512"
+              viewBox="0 0 512 512"
+              style="color: currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              class="size-8 inline"
+            >
+              <rect
+                width="512"
+                height="512"
+                x="0"
+                y="0"
+                rx="30"
+                fill="transparent"
+                stroke="transparent"
+                stroke-width="0"
+                stroke-opacity="100%"
+                paint-order="stroke"
+              ></rect>
+              <svg
+                width="256px"
+                height="256px"
+                viewBox="0 0 1024 1024"
+                fill="currentColor"
+                x="128"
+                y="128"
+                role="img"
+                style="display: inline-block; vertical-align: middle"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g fill="currentColor">
+                  <path
+                    fill="currentColor"
+                    d="M624 706.3h-74.1V464c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v242.3H400c-6.7 0-10.4 7.7-6.3 12.9l112 141.7a8 8 0 0 0 12.6 0l112-141.7c4.1-5.2.4-12.9-6.3-12.9z"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M811.4 366.7C765.6 245.9 648.9 160 512.2 160S258.8 245.8 213 366.6C127.3 389.1 64 467.2 64 560c0 110.5 89.5 200 199.9 200H304c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8h-40.1c-33.7 0-65.4-13.4-89-37.7c-23.5-24.2-36-56.8-34.9-90.6c.9-26.4 9.9-51.2 26.2-72.1c16.7-21.3 40.1-36.8 66.1-43.7l37.9-9.9l13.9-36.6c8.6-22.8 20.6-44.1 35.7-63.4a245.6 245.6 0 0 1 52.4-49.9c41.1-28.9 89.5-44.2 140-44.2s98.9 15.3 140 44.2c19.9 14 37.5 30.8 52.4 49.9c15.1 19.3 27.1 40.7 35.7 63.4l13.8 36.5l37.8 10C846.1 454.5 884 503.8 884 560c0 33.1-12.9 64.3-36.3 87.7a123.07 123.07 0 0 1-87.6 36.3H720c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h40.1C870.5 760 960 670.5 960 560c0-92.7-63.1-170.7-148.6-193.3z"
+                  />
+                </g>
+              </svg></svg>
+        </button>
+      </div>
+    </section>
   </body>
 
   <script>
