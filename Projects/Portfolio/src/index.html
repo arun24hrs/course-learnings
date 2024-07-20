@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Arun Kr. Rana Portfolio" />
+    <meta name="author" content="Arun Kr. Rana" />
+    <meta
+      name="description"
+      content="Welcome to my Portfolio website. This website is to showcase about me and what all skills I possess. This webpage also shows the projects on which I have worked using all the skills that I learnt."
+    />
+    <meta
+      name="keywords"
+      content="html, CSS, Javascript, MERN Developer, React.js, React Developer, front-end Developer, full stack developer, web developer, technical skills, MERN, Node.js, Express.js, MongoDB, Node developer"
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Arun Kr. Rana | Portfolio</title>
+  </head>
+  <body class="w-full">
+
+    <!-- ========= NAVBAR ========= -->
+
+    <nav class="flex flex-col bg-theme-45 p-2">
+      <div class="flex justify-between align-middle">
+        <img class="w-36" src="./images/logo.png" alt="logo" />
+        <div id="checkbox" class="flex justify-center align-middle">
+          <input type="checkbox" id="check1" class="toggle" />
+          <label for="check1"></label>
+        </div>
+        <img
+          src="./images/icons8-cross-50.png"
+          id="menuClose"
+          class="size-8 m-3 hidden"
+          onclick="handleMenuClose()"
+          alt="close menu icon"
+        /><img
+          src="./images/icons8-hamburger-menu-50.png"
+          id="menuOpen"
+          class="size-8 m-3"
+          onclick="handleMenuOpen()"
+          alt="hamburger menu icon"
+        />
+      </div>
+
+      <div id="menu" class="hidden">
+        <ul
+          class="flex gap-6 p-2 flex-col text-center text-theme-20 m-auto w-4/5 pt-10"
+        >
+          <li
+            class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500"
+          >
+            <a href="#home">Home</a>
+          </li>
+          <li
+            class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500"
+          >
+            <a href="#about">About</a>
+          </li>
+          <li
+            class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500"
+          >
+            <a href="#skills">Skills</a>
+          </li>
+          <li
+            class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500"
+          >
+            <a href="#services">Services</a>
+          </li>
+          <li
+            class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500"
+          >
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ========= NAVBAR ENDS ========= -->
+
+    <!-- ========= HEADER ========= -->
+
+    <header>
+
+    </header>
+
+  </body>
+
+  <script>
+    let menu = document.getElementById("menu");
+    let open = document.getElementById("menuOpen");
+    let close = document.getElementById("menuClose");
+    const handleMenuOpen = () => {
+      menu.style.display = "block";
+      open.style.display = "none";
+      close.style.display = "block";
+    };
+    const handleMenuClose = () => {
+      menu.style.display = "none";
+      open.style.display = "block";
+      close.style.display = "none";
+    };
+  </script>
+</html>
