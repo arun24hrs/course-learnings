@@ -24,7 +24,9 @@
   <body class="w-full">
     <!-- ========= NAVBAR ========= -->
 
-    <nav class="flex flex-col bg-theme-45 p-2">
+    <nav
+      class="flex flex-col bg-theme-45 p-2 sticky top-0 z-20 border-b border-white"
+    >
       <div class="flex justify-between align-middle">
         <img class="w-32" src="./images/logo.png" alt="logo" />
         <div id="checkbox" class="flex justify-center align-middle">
@@ -86,11 +88,11 @@
     <header>
       <div class="h-[65vh] bg-theme-10 flex flex-col items-center pt-12">
         <img class="w-3/5 rounded-3xl" src="./images/intro img.gif" alt="" />
-        <h1 class="text-2xl font-bold text-theme-45 text-center mt-8">
+        <h1 class="text-3xl font-bold text-theme-45 text-center mt-8">
           Hi👋🏼, I am Arun Kr. Rana
         </h1>
         <h2
-          class="text-l font-bold text-theme-40 text-center mt-4 before:content-['<'] after:content-['/>']"
+          class="text-xl font-bold text-theme-40 text-center mt-4 before:content-['<'] after:content-['/>']"
         >
           A Full Stack Web Developer
         </h2>
@@ -148,11 +150,11 @@
       <div class="bg-theme-45 h-auto p-8 text-center">
         <h2 class="text-theme-10 text-3xl text-center m-8">About Me</h2>
         <img
-          class="rounded-3xl mb-5"
+          class="rounded-3xl mb-5 m-auto"
           src="./images/dp.jpg"
           alt="profile image"
         />
-        <h3 class="mt-5 text-theme-10 font-bold">
+        <h3 class="mt-5 text-theme-10 font-bold text-2xl">
           Hotelier by Degree, Developer by Skills
         </h3>
         <p class="text-theme-20 text-justify first-letter:text-4xl">
@@ -564,73 +566,264 @@
     <!-- ================== Project Section =================== -->
 
     <section id="projects" class="h-auto">
-      <div class="bg-theme-40 p-8 pb-20">
-        <h2 class="text-3xl text-center m-8 text-theme-10">Projects</h2>
+      <div class="bg-theme-20 p-8 pb-4">
+        <h2 class="text-3xl text-center m-8 text-theme-45">Projects</h2>
         <div id="projectWrapper">
-          <div class="projectCard my-20 border border-theme-10 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300">
+          <div
+            class="projectCard my-5 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300"
+          >
             <img src="./images/homeDecore.png" alt="homeDecore image" />
-            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">HOMEDECORE.COM</h3>
-            <p class="text-theme-10 text-justify">Home Decore is a clone of Pepperfry that caters the need furnitures, lamps, carpets, home decore at best price. People who are planning to redefine their home and looking for home items can visit.</p>
-            <p class="text-theme-20 font-bold my-3">Tech Stack: <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span></p>
+            <h3 class="text-center text-theme-45 font-bold m-4 text-xl">
+              HOMEDECORE.COM
+            </h3>
+            <p class="text-theme-10 text-justify">
+              Home Decore is a clone of Pepperfry that caters the need
+              furnitures, lamps, carpets, home decore at best price. People who
+              are planning to redefine their home and looking for home items can
+              visit.
+            </p>
+            <p class="text-theme-20 font-bold my-3">
+              Tech Stack:
+              <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
+            </p>
             <div class="text-center flex flex-col gap-4">
-              <button class="bg-theme-45 px-4 text-sm py-2 rounded-3xl text-theme-30 hover:text-theme-45 duration-300 hover:bg-theme-20">Visit Website</button><button class="bg-theme-45 px-4 text-sm py-2 rounded-3xl text-theme-30 hover:text-theme-45 duration-300 hover:bg-theme-20">Source Code</button>
+              <button
+                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
+              >
+                Visit Website</button
+              ><button
+                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
+              >
+                Source Code
+              </button>
             </div>
           </div>
 
-          <div class="projectCard my-20 border border-theme-10 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300">
+          <div
+            class="projectCard my-20 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-105 duration-300"
+          >
             <img src="./images/homeDecore.png" alt="homeDecore image" />
-            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">HOMEDECORE.COM</h3>
-            <p class="text-theme-10 text-justify">Home Decore is a clone of Pepperfry that caters the need furnitures, lamps, carpets, home decore at best price. People who are planning to redefine their home and looking for home items can visit.</p>
-            <p class="text-theme-20 font-bold my-3">Tech Stack: <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span></p>
+            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
+              HOMEDECORE.COM
+            </h3>
+            <p class="text-theme-10 text-justify">
+              Home Decore is a clone of Pepperfry that caters the need
+              furnitures, lamps, carpets, home decore at best price. People who
+              are planning to redefine their home and looking for home items can
+              visit.
+            </p>
+            <p class="text-theme-20 font-bold my-3">
+              Tech Stack:
+              <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
+            </p>
             <div class="text-center flex flex-col gap-4">
-              <button class="bg-theme-45 px-4 text-sm py-2 rounded-3xl text-theme-30 hover:text-theme-45 duration-300 hover:bg-theme-20">Visit Website</button><button class="bg-theme-45 px-4 text-sm py-2 rounded-3xl text-theme-30 hover:text-theme-45 duration-300 hover:bg-theme-20">Source Code</button>
+              <button
+                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
+              >
+                Visit Website</button
+              ><button
+                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
+              >
+                Source Code
+              </button>
             </div>
           </div>
 
-          <div class="projectCard my-20 border border-theme-10 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300">
+          <div
+            class="projectCard my-20 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300"
+          >
             <img src="./images/homeDecore.png" alt="homeDecore image" />
-            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">HOMEDECORE.COM</h3>
-            <p class="text-theme-10 text-justify">Home Decore is a clone of Pepperfry that caters the need furnitures, lamps, carpets, home decore at best price. People who are planning to redefine their home and looking for home items can visit.</p>
-            <p class="text-theme-20 font-bold my-3">Tech Stack: <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span></p>
+            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
+              HOMEDECORE.COM
+            </h3>
+            <p class="text-theme-10 text-justify">
+              Home Decore is a clone of Pepperfry that caters the need
+              furnitures, lamps, carpets, home decore at best price. People who
+              are planning to redefine their home and looking for home items can
+              visit.
+            </p>
+            <p class="text-theme-20 font-bold my-3">
+              Tech Stack:
+              <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
+            </p>
             <div class="text-center flex flex-col gap-4">
-              <button class="bg-theme-45 px-4 text-sm py-2 rounded-3xl text-theme-30 hover:text-theme-45 duration-300 hover:bg-theme-20">Visit Website</button><button class="bg-theme-45 px-4 text-sm py-2 rounded-3xl text-theme-30 hover:text-theme-45 duration-300 hover:bg-theme-20">Source Code</button>
+              <button
+                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
+              >
+                Visit Website</button
+              ><button
+                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
+              >
+                Source Code
+              </button>
             </div>
           </div>
 
-          <div class="projectCard my-20 border border-theme-10 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300">
+          <div
+            class="projectCard my-20 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300"
+          >
             <img src="./images/homeDecore.png" alt="homeDecore image" />
-            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">HOMEDECORE.COM</h3>
-            <p class="text-theme-10 text-justify">Home Decore is a clone of Pepperfry that caters the need furnitures, lamps, carpets, home decore at best price. People who are planning to redefine their home and looking for home items can visit.</p>
-            <p class="text-theme-20 font-bold my-3">Tech Stack: <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span></p>
+            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
+              HOMEDECORE.COM
+            </h3>
+            <p class="text-theme-10 text-justify">
+              Home Decore is a clone of Pepperfry that caters the need
+              furnitures, lamps, carpets, home decore at best price. People who
+              are planning to redefine their home and looking for home items can
+              visit.
+            </p>
+            <p class="text-theme-20 font-bold my-3">
+              Tech Stack:
+              <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
+            </p>
             <div class="text-center flex flex-col gap-4">
-              <button class="bg-theme-45 px-4 text-sm py-2 rounded-3xl text-theme-30 hover:text-theme-45 duration-300 hover:bg-theme-20">Visit Website</button><button class="bg-theme-45 px-4 text-sm py-2 rounded-3xl text-theme-30 hover:text-theme-45 duration-300 hover:bg-theme-20">Source Code</button>
+              <button
+                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
+              >
+                Visit Website</button
+              ><button
+                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
+              >
+                Source Code
+              </button>
             </div>
           </div>
 
-          <div class="projectCard my-20 border border-theme-10 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300">
+          <div
+            class="projectCard my-20 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300"
+          >
             <img src="./images/homeDecore.png" alt="homeDecore image" />
-            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">HOMEDECORE.COM</h3>
-            <p class="text-theme-10 text-justify">Home Decore is a clone of Pepperfry that caters the need furnitures, lamps, carpets, home decore at best price. People who are planning to redefine their home and looking for home items can visit.</p>
-            <p class="text-theme-20 font-bold my-3">Tech Stack: <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span></p>
+            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
+              HOMEDECORE.COM
+            </h3>
+            <p class="text-theme-10 text-justify">
+              Home Decore is a clone of Pepperfry that caters the need
+              furnitures, lamps, carpets, home decore at best price. People who
+              are planning to redefine their home and looking for home items can
+              visit.
+            </p>
+            <p class="text-theme-20 font-bold my-3">
+              Tech Stack:
+              <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
+            </p>
             <div class="text-center flex flex-col gap-4">
-              <button class="bg-theme-45 px-4 text-sm py-2 rounded-3xl text-theme-30 hover:text-theme-45 duration-300 hover:bg-theme-20">Visit Website</button><button class="bg-theme-45 px-4 text-sm py-2 rounded-3xl text-theme-30 hover:text-theme-45 duration-300 hover:bg-theme-20">Source Code</button>
+              <button
+                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
+              >
+                Visit Website</button
+              ><button
+                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
+              >
+                Source Code
+              </button>
             </div>
           </div>
 
-          <div class="projectCard my-20 border border-theme-10 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300">
+          <div
+            class="projectCard my-20 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300"
+          >
             <img src="./images/homeDecore.png" alt="homeDecore image" />
-            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">HOMEDECORE.COM</h3>
-            <p class="text-theme-10 text-justify">Home Decore is a clone of Pepperfry that caters the need furnitures, lamps, carpets, home decore at best price. People who are planning to redefine their home and looking for home items can visit.</p>
-            <p class="text-theme-20 font-bold my-3">Tech Stack: <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span></p>
+            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
+              HOMEDECORE.COM
+            </h3>
+            <p class="text-theme-10 text-justify">
+              Home Decore is a clone of Pepperfry that caters the need
+              furnitures, lamps, carpets, home decore at best price. People who
+              are planning to redefine their home and looking for home items can
+              visit.
+            </p>
+            <p class="text-theme-20 font-bold my-3">
+              Tech Stack:
+              <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
+            </p>
             <div class="text-center flex flex-col gap-4">
-              <button class="bg-theme-45 px-4 text-sm py-2 rounded-3xl text-theme-30 hover:text-theme-45 duration-300 hover:bg-theme-20">Visit Website</button><button class="bg-theme-45 px-4 text-sm py-2 rounded-3xl text-theme-30 hover:text-theme-45 duration-300 hover:bg-theme-20">Source Code</button>
+              <button
+                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
+              >
+                Visit Website</button
+              ><button
+                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
+              >
+                Source Code
+              </button>
             </div>
           </div>
-
-          
         </div>
       </div>
     </section>
+
+    <!-- ========================= PROJECT SECTION ENDS ==================== -->
+
+    <!-- ================== CONTACT SECTION  =================== -->
+
+    <section id="contact">
+      <div class="bg-theme-45 h-auto p-8">
+        <h2 class="text-theme-10 text-3xl text-center m-8">Contact Me</h2>
+        <div id="formWrapper">
+          <div id="formContainer" class="w-11/12 m-auto text-theme-20"><form>
+            <label for="userName">Name:</label>
+            <br>
+            <input type="text" name="name" id="userName" class="w-full rounded bg-theme-10 h-7 p-1 text-theme-45">
+            <br>
+            <label for="userEmail" class="mt-3 inline-block">Email:</label>
+            <br>
+            <input type="email" name="email" id="userEmail" class="w-full rounded bg-theme-10 h-7 p-1 text-theme-45">
+            <br>
+            <label for="userMessage" class="mt-3 inline-block">Message:</label>
+            <br>
+            <textarea name="message" id="userMessage" class="w-full rounded bg-theme-10 text-theme-45 p-1"></textarea>
+            <br>
+            <input type="submit" value="Send Now" class="bg-theme-20 text-theme-45 p-2 rounded-lg mt-4 block m-auto w-1/2 hover:pointer hover:bg-theme-40 hover:text-theme-10 duration-300">
+              
+          </form></div>
+
+          <div id="socialLinksContainer">
+            <div class="flex justify-around  mt-7">
+              <a
+                class="hover:scale-125 duration-300"
+                href="mailto:2017arun.rana@gmail.com"
+                target="_blank"
+              >
+                <img
+                  class="size-10"
+                  src="./images/gmail-logo-60.png"
+                  alt="gmail icon"
+                />
+              </a>
+              <a
+                class="hover:scale-125 duration-300"
+                href="tel:+91-9868494572"
+                target="_blank"
+                ><img class="size-10" src="./images/phone-60.png" alt="phone icon"
+              /></a>
+              <a
+                class="hover:scale-125 duration-300"
+                href="https://github.com/arun24hrs"
+                target="_blank"
+                ><img
+                  class="size-10"
+                  src="./images/github-60.png"
+                  alt="github icon"
+              /></a>
+              <a
+                class="hover:scale-125 duration-300"
+                href="https://www.linkedin.com/in/arun-kr-rana/"
+                target="_blank"
+                ><img
+                  class="size-10"
+                  src="./images/linkedin-60.png"
+                  alt="linkedin icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-theme-10 text-center p-3">
+      <p class="text-theme-45">Made with ❤️ by Arun Kumar Rana</p>
+    </footer>
+
   </body>
 
   <script>

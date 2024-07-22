@@ -562,8 +562,16 @@ video {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .top-0 {
   top: 0px;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .m-3 {
@@ -590,6 +598,16 @@ video {
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .mb-1\.5 {
@@ -622,6 +640,10 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .block {
@@ -668,6 +690,10 @@ video {
   height: 0.75rem;
 }
 
+.h-\[65vh\] {
+  height: 65vh;
+}
+
 .h-auto {
   height: auto;
 }
@@ -676,20 +702,20 @@ video {
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
-.h-\[\] {
-  height: ;
-}
-
-.h-\[70\] {
-  height: 70;
-}
-
 .h-\[70vh\] {
   height: 70vh;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-7 {
+  height: 1.75rem;
+}
+
+.h-\[60vh\] {
+  height: 60vh;
 }
 
 .w-11\/12 {
@@ -740,6 +766,10 @@ video {
   width: 100%;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
@@ -770,6 +800,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .gap-4 {
@@ -820,9 +854,28 @@ video {
   border-width: 1px;
 }
 
+.border-b {
+  border-bottom-width: 1px;
+}
+
 .border-theme-10 {
   --tw-border-opacity: 1;
   border-color: rgb(234 226 183 / var(--tw-border-opacity));
+}
+
+.border-theme-45 {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 48 73 / var(--tw-border-opacity));
+}
+
+.border-theme-30 {
+  --tw-border-opacity: 1;
+  border-color: rgb(247 127 0 / var(--tw-border-opacity));
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .bg-black {
@@ -853,6 +906,11 @@ video {
 .bg-theme-45 {
   --tw-bg-opacity: 1;
   background-color: rgb(0 48 73 / var(--tw-bg-opacity));
+}
+
+.bg-theme-20 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 191 73 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -894,6 +952,14 @@ video {
   padding: 2rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -919,6 +985,18 @@ video {
 
 .pt-12 {
   padding-top: 3rem;
+}
+
+.pb-40 {
+  padding-bottom: 10rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-center {
@@ -956,6 +1034,11 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -1138,6 +1221,12 @@ input[type="checkbox"].toggle:disabled + label::after {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:scale-x-105:hover {
   --tw-scale-x: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1170,6 +1259,11 @@ input[type="checkbox"].toggle:disabled + label::after {
   background-color: rgb(214 40 40 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-theme-45:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 48 73 / var(--tw-bg-opacity));
+}
+
 .hover\:text-theme-20:hover {
   --tw-text-opacity: 1;
   color: rgb(252 191 73 / var(--tw-text-opacity));
@@ -1188,6 +1282,11 @@ input[type="checkbox"].toggle:disabled + label::after {
 .hover\:text-theme-45:hover {
   --tw-text-opacity: 1;
   color: rgb(0 48 73 / var(--tw-text-opacity));
+}
+
+.hover\:text-theme-10:hover {
+  --tw-text-opacity: 1;
+  color: rgb(234 226 183 / var(--tw-text-opacity));
 }
 
 .hover\:opacity-70:hover {
