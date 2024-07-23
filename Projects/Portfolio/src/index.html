@@ -1,766 +1,552 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="Arun Kr. Rana Portfolio" />
-    <meta name="author" content="Arun Kr. Rana" />
-    <meta
-      name="description"
-      content="Welcome to my Portfolio website. This website is to showcase about me and what all skills I possess. This webpage also shows the projects on which I have worked using all the skills that I learnt."
-    />
-    <meta
-      name="keywords"
-      content="html, CSS, Javascript, MERN Developer, React.js, React Developer, front-end Developer, full stack developer, web developer, technical skills, MERN, Node.js, Express.js, MongoDB, Node developer"
-    />
-    <link
-      rel="shortcut icon"
-      href="./images/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="output.css" />
-    <title>Arun Kr. Rana | Portfolio</title>
-  </head>
-  <body class="w-full">
-    <!-- ========= NAVBAR ========= -->
+<html lang="en" class="scroll-smooth">
 
-    <nav
-      class="flex flex-col bg-theme-45 p-2 sticky top-0 z-20 border-b border-white"
-    >
-      <div class="flex justify-between align-middle">
-        <img class="w-32" src="./images/logo.png" alt="logo" />
-        <div id="checkbox" class="flex justify-center align-middle">
-          <input type="checkbox" id="check1" class="toggle" />
-          <label for="check1"></label>
-        </div>
-        <img
-          src="./images/icons8-cross-50.png"
-          id="menuClose"
-          class="size-7 m-3 hidden"
-          onclick="handleMenuClose()"
-          alt="close menu icon"
-        /><img
-          src="./images/icons8-hamburger-menu-50.png"
-          id="menuOpen"
-          class="size-7 m-3"
-          onclick="handleMenuOpen()"
-          alt="hamburger menu icon"
-        />
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="title" content="Arun Kr. Rana Portfolio" />
+  <meta name="author" content="Arun Kr. Rana" />
+  <meta name="description"
+    content="Welcome to my Portfolio website. This website is to showcase about me and what all skills I possess. This webpage also shows the projects on which I have worked using all the skills that I learnt." />
+  <meta name="keywords"
+    content="html, CSS, Javascript, MERN Developer, React.js, React Developer, front-end Developer, full stack developer, web developer, technical skills, MERN, Node.js, Express.js, MongoDB, Node developer" />
+  <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="output.css" />
+  <title>Arun Kr. Rana | Portfolio</title>
+</head>
 
-      <div id="menu" class="hidden">
-        <ul
-          class="flex gap-6 p-2 flex-col text-center text-theme-20 m-auto w-4/5 pt-10"
-        >
-          <li
-            class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500"
-          >
+<body class="w-full">
+  <!-- ========= NAVBAR ========= -->
+
+  <nav class="flex flex-col bg-theme-45 p-2 sticky top-0 z-20 border-b border-white">
+    <div class="flex justify-between align-middle">
+      <img class="w-32 sm:w-40" src="./images/logo.png" alt="logo" />
+      <div id="menu" class="hidden sm:block">
+        <ul class="hidden sm:flex sm:items-center h-full gap-6 text-theme-20 md:text-lg md:gap-8">
+          <li class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500">
             <a href="#home">Home</a>
           </li>
-          <li
-            class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500"
-          >
+          <li class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500">
             <a href="#about">About</a>
           </li>
-          <li
-            class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500"
-          >
+          <li class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500">
             <a href="#skills">Skills</a>
           </li>
-          <li
-            class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500"
-          >
+          <li class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500">
             <a href="#services">Services</a>
           </li>
-          <li
-            class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500"
-          >
+          <li class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500">
             <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>
-    </nav>
+      <div id="checkbox" class="flex justify-center align-middle sm:px-4">
+        <input type="checkbox" id="check1" class="toggle" />
+        <label for="check1"></label>
+      </div>
+      <img src="./images/icons8-cross-50.png" id="menuClose" class="size-7 m-3 hidden" onclick="handleMenuClose()"
+        alt="close menu icon" /><img src="./images/icons8-hamburger-menu-50.png" id="menuOpen"
+        class="size-7 m-3 sm:hidden" onclick="handleMenuOpen()" alt="hamburger menu icon" />
+    </div>
 
-    <!-- ========= NAVBAR ENDS ========= -->
+    <div id="mobileMenu" class="hidden">
+      <ul class="flex gap-6 p-2 flex-col text-center text-theme-20 m-auto w-4/5 pt-10">
+        <li class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500">
+          <a href="#home">Home</a>
+        </li>
+        <li class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500">
+          <a href="#about">About</a>
+        </li>
+        <li class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500">
+          <a href="#skills">Skills</a>
+        </li>
+        <li class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500">
+          <a href="#services">Services</a>
+        </li>
+        <li class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500">
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- ========= HEADER ========= -->
+  <!-- ========= NAVBAR ENDS ========= -->
 
-    <header>
-      <div class="h-[65vh] bg-theme-10 flex flex-col items-center pt-12">
-        <img class="w-3/5 rounded-3xl" src="./images/intro img.gif" alt="" />
-        <h1 class="text-3xl font-bold text-theme-45 text-center mt-8">
-          Hi👋🏼, I am Arun Kr. Rana
-        </h1>
-        <h2
-          class="text-xl font-bold text-theme-40 text-center mt-4 before:content-['<'] after:content-['/>']"
-        >
-          A Full Stack Web Developer
-        </h2>
-        <div class="flex gap-6 mt-7">
-          <a
-            class="hover:scale-125 duration-300"
-            href="mailto:2017arun.rana@gmail.com"
-            target="_blank"
-          >
-            <img
-              class="size-10"
-              src="./images/gmail-logo-60.png"
-              alt="gmail icon"
-            />
+  <!-- ========= HEADER ========= -->
+
+  <header>
+    <div class="h-[65vh] bg-theme-10 flex flex-col items-center pt-12 lg:h-[80vh] ">
+      <img class="w-6/12 rounded-3xl sm:w-2/5 lg:w-3/12" src="./images/intro img.gif" alt="" />
+      <h1 class="text-3xl font-bold text-theme-45 text-center mt-8">
+        Hi👋🏼, I am Arun Kr. Rana
+      </h1>
+      <h2 class="text-xl font-bold text-theme-40 text-center mt-4 before:content-['<'] after:content-['/>']">
+        A Full Stack Web Developer
+      </h2>
+      <div class="flex gap-6 mt-7">
+        <a class="hover:scale-125 duration-300" href="mailto:2017arun.rana@gmail.com" target="_blank">
+          <img class="size-10" src="./images/gmail-logo-60.png" alt="gmail icon" />
+        </a>
+        <a class="hover:scale-125 duration-300" href="tel:+91-9868494572" target="_blank"><img class="size-10"
+            src="./images/phone-60.png" alt="phone icon" /></a>
+        <a class="hover:scale-125 duration-300" href="https://github.com/arun24hrs" target="_blank"><img class="size-10"
+            src="./images/github-60.png" alt="github icon" /></a>
+        <a class="hover:scale-125 duration-300" href="https://www.linkedin.com/in/arun-kr-rana/" target="_blank"><img
+            class="size-10" src="./images/linkedin-60.png" alt="linkedin icon" /></a>
+      </div>
+      <div class="mt-12 lg:hidden">
+        <a href="#about" id="scrollDown">
+          <img class="m-auto animate-bounce size-8 bg-black rounded-full" src="./images/scroll-down.png"
+            alt="circled-down-2" />
+          <p class="text-theme-30 text-xs drop-shadow-lg">Scroll Down</p>
+      </div>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========== HEADER ENDS =========== -->
+
+  <!-- ========== ABOUT SECTION ========== -->
+
+  <section id="about">
+    <div class="bg-theme-45 h-auto p-8 text-center">
+      <h2 class="text-theme-10 text-3xl text-center m-8 ">About Me</h2>
+      <div class="lg:flex lg:gap-10 lg:mb-20">
+        <img class="rounded-3xl mb-5 m-auto w-6/12 sm:4/12 lg:w-3/12" src="./images/dp.jpg" alt="profile image" />
+        <div class="lg:w-7/12">
+          <h3 class="mt-5 text-theme-10 font-bold text-2xl">
+            Hotelier by Degree, Developer by Skills
+          </h3>
+          <p class="text-theme-20 text-justify first-letter:text-4xl">
+            An enthusiastic full stack web developer possessing skills of
+            developing websites using JavaScript, React.js, Next.js, TypeScript,
+            Redux, HTML and CSS for frontend development and Node.js, Express.js,
+            MongoDB for backend development. Constantly learning and honing
+            problem solving skills to be a more efficient resource. Looking for an
+            opportunity to build career as full-stack developer and put efforts in
+            achieving organizational goals.
+          </p>
+          <div class="lg:flex lg:gap-4">
+            <button
+              class="py-2 px-7 rounded-3xl duration-300 mt-8 bg-theme-30 text-theme-45 hover:bg-theme-20 hover:text-theme-40 hover:scale-x-105">
+              Read More
+            </button>
+            <br class="lg:hidden">
+            <button class="mt-8 bg-theme-30 btn text-theme-45 hover:bg-theme-40 hover:text-theme-20 hover:scale-x-105">
+              Resume<svg width="512" height="512" viewBox="0 0 512 512" style="color: currentColor"
+                xmlns="http://www.w3.org/2000/svg" class="size-8 inline">
+                <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
+                  stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect>
+                <svg width="256px" height="256px" viewBox="0 0 1024 1024" fill="currentColor" x="128" y="128" role="img"
+                  style="display: inline-block; vertical-align: middle" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="currentColor">
+                    <path fill="currentColor"
+                      d="M624 706.3h-74.1V464c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v242.3H400c-6.7 0-10.4 7.7-6.3 12.9l112 141.7a8 8 0 0 0 12.6 0l112-141.7c4.1-5.2.4-12.9-6.3-12.9z" />
+                    <path fill="currentColor"
+                      d="M811.4 366.7C765.6 245.9 648.9 160 512.2 160S258.8 245.8 213 366.6C127.3 389.1 64 467.2 64 560c0 110.5 89.5 200 199.9 200H304c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8h-40.1c-33.7 0-65.4-13.4-89-37.7c-23.5-24.2-36-56.8-34.9-90.6c.9-26.4 9.9-51.2 26.2-72.1c16.7-21.3 40.1-36.8 66.1-43.7l37.9-9.9l13.9-36.6c8.6-22.8 20.6-44.1 35.7-63.4a245.6 245.6 0 0 1 52.4-49.9c41.1-28.9 89.5-44.2 140-44.2s98.9 15.3 140 44.2c19.9 14 37.5 30.8 52.4 49.9c15.1 19.3 27.1 40.7 35.7 63.4l13.8 36.5l37.8 10C846.1 454.5 884 503.8 884 560c0 33.1-12.9 64.3-36.3 87.7a123.07 123.07 0 0 1-87.6 36.3H720c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h40.1C870.5 760 960 670.5 960 560c0-92.7-63.1-170.7-148.6-193.3z" />
+                  </g>
+                </svg>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======== About Section Ends ========== -->
+
+  <!-- =========== Skills Sections ============ -->
+
+  <section id="skills">
+    <div class="h-auto p-10">
+      <h2 class="text-theme-40 text-3xl text-center m-4">Skills</h2>
+      <div id="progressBar" class="flex flex-col gap-6 mt-10 sm:grid sm:grid-cols-2 sm:mb-10 lg:gap-12 lg:w-10/12 m-auto">
+        <!-- ============================ HTML -->
+        <div class="shadow-lg rounded bg-theme-10 p-2">
+          <h4 class="mb-1.5 text-sm font-bold">HTML:</h4>
+          <div class="flex items-center">
+            <img class="size-6 inline mr-4" src="./images/html5.svg" alt="HTML icon" />
+            <span class="w-full text-white text-xs h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
+              <span
+                class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[90%] inline-block absolute rounded-md"></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- ================================= CSS -->
+
+        <div class="shadow-lg rounded bg-theme-10 p-2">
+          <h4 class="mb-1.5 text-sm font-bold">CSS:</h4>
+          <div class="flex items-center">
+            <img class="size-6 inline mr-4" src="./images/css3.svg" alt="HTML icon" />
+            <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
+              <span
+                class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[75%] inline-block absolute rounded-md"></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- ================================= JS -->
+
+        <div class="shadow-lg rounded bg-theme-10 p-2">
+          <h4 class="mb-1.5 text-sm font-bold">JS:</h4>
+          <div class="flex items-center">
+            <img class="size-6 inline mr-4" src="./images/javascript.svg" alt="HTML icon" />
+            <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
+              <span
+                class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[65%] inline-block absolute rounded-md"></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- ================================= REACT -->
+
+        <div class="shadow-lg rounded bg-theme-10 p-2">
+          <h4 class="mb-1.5 text-sm font-bold">JS:</h4>
+          <div class="flex items-center">
+            <img class="size-6 inline mr-4 bg-blue-900 rounded-lg" src="./images/react.svg" alt="HTML icon" />
+            <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
+              <span
+                class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[60%] inline-block absolute rounded-md"></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- ================================= REDUX -->
+
+        <div class="shadow-lg rounded bg-theme-10 p-2">
+          <h4 class="mb-1.5 text-sm font-bold">Redux:</h4>
+          <div class="flex items-center">
+            <img class="size-6 inline mr-4" src="./images/redux.svg" alt="HTML icon" />
+            <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
+              <span
+                class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[80%] inline-block absolute rounded-md"></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- ================================= Tailwind -->
+
+        <div class="shadow-lg rounded bg-theme-10 p-2">
+          <h4 class="mb-1.5 text-sm font-bold">TailWind:</h4>
+          <div class="flex items-center">
+            <img class="size-6 inline mr-4" src="./images/tailwind.png" alt="HTML icon" />
+            <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
+              <span
+                class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[70%] inline-block absolute rounded-md"></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- ================================= Node.js -->
+
+        <div class="shadow-lg rounded bg-theme-10 p-2">
+          <h4 class="mb-1.5 text-sm font-bold">NodeJS:</h4>
+          <div class="flex items-center">
+            <img class="size-6 inline mr-4" src="./images/node.png" alt="HTML icon" />
+            <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
+              <span
+                class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[55%] inline-block absolute rounded-md"></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- ================================= Express.js -->
+
+        <div class="shadow-lg rounded bg-theme-10 p-2">
+          <h4 class="mb-1.5 text-sm font-bold">Express.JS:</h4>
+          <div class="flex items-center">
+            <img class="size-6 inline mr-4" src="./images/express.png" alt="HTML icon" />
+            <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
+              <span
+                class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[65%] inline-block absolute rounded-md"></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- ================================= MongoDB -->
+
+        <div class="shadow-lg rounded bg-theme-10 p-2">
+          <h4 class="mb-1.5 text-sm font-bold">MongoDB:</h4>
+          <div class="flex items-center">
+            <img class="size-6 inline mr-4" src="./images/mongodb.png" alt="HTML icon" />
+            <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
+              <span
+                class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[70%] inline-block absolute rounded-md"></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- ================================= Next.js -->
+
+        <div class="shadow-lg rounded bg-theme-10 p-2">
+          <h4 class="mb-1.5 text-sm font-bold">Next.JS:</h4>
+          <div class="flex items-center">
+            <img class="size-6 inline mr-4" src="./images/nextjs.svg" alt="HTML icon" />
+            <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
+              <span
+                class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[65%] inline-block absolute rounded-md"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= SKILLS SECTION ENDS ==================== -->
+
+  <!-- ================== CERTIFICATION SECTION =================== -->
+
+  <section id="certifications" class="h-auto">
+    <div class="bg-theme-10 p-8 pb-20">
+      <h2 class="text-theme-40 text-3xl text-center m-4">Certifications</h2>
+      <div class="flex flex-col gap-8 md:grid grid-cols-2">
+        <!-- ========================= Full Stack Development -->
+        <div class="certificateWrapper">
+          <h3 class="text-xl text-theme-45 m-3">FSD - Masai School</h3>
+          <a href="https://drive.google.com/file/d/11NyNTycJBf7rNj_rZ1HtVyjq82_pGa_9/view" target="_blank">
+            <div class="relative w-4/5 m-auto hover:rounded-lg hover:overflow-hidden hover:scale-95 duration-500">
+              <img class="m-auto" src="./images/FSD-certificate.png" alt="Full Stack Developer certificate" />
+              <img class="absolute w-full h-full top-0 opacity-60" src="./images/floral-border.png"
+                alt="FSD certificate" />
+              <div
+                class="absolute flex justify-center items-center w-full h-full hover:bg-black top-0 opacity-0 hover:opacity-70 text-white font-bold duration-300">
+                <span class="text-2xl hover:bg-black">Click to open</span>
+              </div>
+            </div>
           </a>
-          <a
-            class="hover:scale-125 duration-300"
-            href="tel:+91-9868494572"
-            target="_blank"
-            ><img class="size-10" src="./images/phone-60.png" alt="phone icon"
-          /></a>
-          <a
-            class="hover:scale-125 duration-300"
-            href="https://github.com/arun24hrs"
-            target="_blank"
-            ><img
-              class="size-10"
-              src="./images/github-60.png"
-              alt="github icon"
-          /></a>
-          <a
-            class="hover:scale-125 duration-300"
-            href="https://www.linkedin.com/in/arun-kr-rana/"
-            target="_blank"
-            ><img
-              class="size-10"
-              src="./images/linkedin-60.png"
-              alt="linkedin icon"
-          /></a>
         </div>
-        <img
-          class="mt-12 animate-bounce size-8 bg-black rounded-full"
-          src="./images/scroll-down.png"
-          alt="circled-down-2"
-        />
-        <p class="text-theme-30 text-xs drop-shadow-lg">Scroll Down</p>
+
+        <!-- ========================= Problem Solving -->
+        <div class="certificateWrapper">
+          <h3 class="text-xl text-theme-45 m-3">
+            Problem Solving - HackerRank
+          </h3>
+          <a href="https://www.hackerrank.com/certificates/9048eff47536" target="_blank">
+            <div class="relative w-4/5 m-auto hover:rounded-lg hover:overflow-hidden hover:scale-95 duration-500">
+              <img class="m-auto" src="./images/problem-solving-certificate.png" alt="Problem solving certificate" />
+              <img class="absolute w-full h-full top-0 opacity-60" src="./images/floral-border.png"
+                alt="DSA certificate" />
+              <div
+                class="absolute flex justify-center items-center w-full h-full hover:bg-black top-0 opacity-0 hover:opacity-70 text-white font-bold duration-300">
+                <span class="text-2xl hover:bg-black">Visit HackerRank</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- ============================= React Basic -->
+        <div class="certificateWrapper">
+          <h3 class="text-xl text-theme-45 m-3">
+            React (Basic) - HackerRank
+          </h3>
+          <a href="https://www.hackerrank.com/certificates/4e42e420edea" target="_blank">
+            <div class="relative w-4/5 m-auto hover:rounded-lg hover:overflow-hidden hover:scale-95 duration-500">
+              <img class="m-auto" src="./images/react-basic-certificate.png" alt="react certificate" />
+              <img class="absolute w-full h-full top-0 opacity-60" src="./images/floral-border.png"
+                alt="React certificate" />
+              <div
+                class="absolute flex justify-center items-center w-full h-full hover:bg-black top-0 opacity-0 hover:opacity-70 text-white font-bold duration-300">
+                <span class="text-2xl hover:bg-black">Visit HackerRank</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- ============================= Javascript Basic -->
+        <div class="certificateWrapper">
+          <h3 class="text-xl text-theme-45 m-3">
+            JavaScript (Basic) - HackerRank
+          </h3>
+          <a href="https://www.hackerrank.com/certificates/765c94873e55" target="_blank">
+            <div class="relative w-4/5 m-auto hover:rounded-lg hover:overflow-hidden hover:scale-95 duration-500">
+              <img class="m-auto" src="./images/js-basic-certificate.png" alt="react certificate" />
+              <img class="absolute w-full h-full top-0 opacity-60" src="./images/floral-border.png"
+                alt="floral border" />
+              <div
+                class="absolute flex justify-center items-center w-full h-full hover:bg-black top-0 opacity-0 hover:opacity-70 text-white font-bold duration-300">
+                <span class="text-2xl hover:bg-black">Visit HackerRank</span>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <!-- ========== HEADER ENDS =========== -->
+  <!-- ========================= CERTIFICATION SECTION ENDS ==================== -->
 
-    <!-- ========== ABOUT SECTION ========== -->
+  <!-- ================== Project Section =================== -->
 
-    <section id="about">
-      <div class="bg-theme-45 h-auto p-8 text-center">
-        <h2 class="text-theme-10 text-3xl text-center m-8">About Me</h2>
-        <img
-          class="rounded-3xl mb-5 m-auto"
-          src="./images/dp.jpg"
-          alt="profile image"
-        />
-        <h3 class="mt-5 text-theme-10 font-bold text-2xl">
-          Hotelier by Degree, Developer by Skills
-        </h3>
-        <p class="text-theme-20 text-justify first-letter:text-4xl">
-          An enthusiastic full stack web developer possessing skills of
-          developing websites using JavaScript, React.js, Next.js, TypeScript,
-          Redux, HTML and CSS for frontend development and Node.js, Express.js,
-          MongoDB for backend development. Constantly learning and honing
-          problem solving skills to be a more efficient resource. Looking for an
-          opportunity to build career as full-stack developer and put efforts in
-          achieving organizational goals.
-        </p>
-        <button
-          class="py-2 px-7 rounded-3xl duration-300 mt-8 bg-theme-30 text-theme-45 hover:bg-theme-20 hover:text-theme-40 hover:scale-x-105"
-        >
-          Read More
-        </button>
-        <br />
-        <button
-          class="mt-8 bg-theme-30 btn text-theme-45 hover:bg-theme-40 hover:text-theme-20 hover:scale-x-105"
-        >
-          Resume<svg
-            width="512"
-            height="512"
-            viewBox="0 0 512 512"
-            style="color: currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-            class="size-8 inline"
-          >
-            <rect
-              width="512"
-              height="512"
-              x="0"
-              y="0"
-              rx="30"
-              fill="transparent"
-              stroke="transparent"
-              stroke-width="0"
-              stroke-opacity="100%"
-              paint-order="stroke"
-            ></rect>
-            <svg
-              width="256px"
-              height="256px"
-              viewBox="0 0 1024 1024"
-              fill="currentColor"
-              x="128"
-              y="128"
-              role="img"
-              style="display: inline-block; vertical-align: middle"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g fill="currentColor">
-                <path
-                  fill="currentColor"
-                  d="M624 706.3h-74.1V464c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v242.3H400c-6.7 0-10.4 7.7-6.3 12.9l112 141.7a8 8 0 0 0 12.6 0l112-141.7c4.1-5.2.4-12.9-6.3-12.9z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M811.4 366.7C765.6 245.9 648.9 160 512.2 160S258.8 245.8 213 366.6C127.3 389.1 64 467.2 64 560c0 110.5 89.5 200 199.9 200H304c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8h-40.1c-33.7 0-65.4-13.4-89-37.7c-23.5-24.2-36-56.8-34.9-90.6c.9-26.4 9.9-51.2 26.2-72.1c16.7-21.3 40.1-36.8 66.1-43.7l37.9-9.9l13.9-36.6c8.6-22.8 20.6-44.1 35.7-63.4a245.6 245.6 0 0 1 52.4-49.9c41.1-28.9 89.5-44.2 140-44.2s98.9 15.3 140 44.2c19.9 14 37.5 30.8 52.4 49.9c15.1 19.3 27.1 40.7 35.7 63.4l13.8 36.5l37.8 10C846.1 454.5 884 503.8 884 560c0 33.1-12.9 64.3-36.3 87.7a123.07 123.07 0 0 1-87.6 36.3H720c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h40.1C870.5 760 960 670.5 960 560c0-92.7-63.1-170.7-148.6-193.3z"
-                />
-              </g>
-            </svg>
-          </svg>
-        </button>
-      </div>
-    </section>
-
-    <!-- ======== About Section Ends ========== -->
-
-    <!-- =========== Skills Sections ============ -->
-
-    <section id="skills">
-      <div class="h-auto p-10">
-        <h2 class="text-theme-40 text-3xl text-center m-4">Skills</h2>
-        <div id="progressBar" class="flex flex-col gap-6">
-          <!-- ============================ HTML -->
-          <div class="shadow-lg rounded bg-theme-10 p-2">
-            <h4 class="mb-1.5 text-sm font-bold">HTML:</h4>
-            <div class="flex items-center">
-              <img
-                class="size-6 inline mr-4"
-                src="./images/html5.svg"
-                alt="HTML icon"
-              />
-              <span
-                class="w-full text-white text-xs h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative"
-              >
-                <span
-                  class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[90%] inline-block absolute rounded-md"
-                ></span>
-              </span>
-            </div>
+  <section id="projects" class="h-auto">
+    <div class="bg-theme-20 p-8 pb-4">
+      <h2 class="text-3xl text-center m-8 text-theme-45">Projects</h2>
+      <div id="projectWrapper" class="sm:grid sm:grid-cols-2">
+        <div class="projectCard my-10 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-105 duration-300">
+          <img src="./images/homeDecore.png" alt="homeDecore image" />
+          <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
+            HOMEDECORE.COM
+          </h3>
+          <p class="text-theme-10 text-justify">
+            Home Decore is a clone of Pepperfry that caters the need
+            furnitures, lamps, carpets, home decore at best price. People who
+            are planning to redefine their home and looking for home items can
+            visit.
+          </p>
+          <p class="text-theme-20 font-bold my-3">
+            Tech Stack:
+            <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
+          </p>
+          <div class="text-center flex flex-col gap-4">
+            <button
+              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Visit Website</button><button
+              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Source Code
+            </button>
           </div>
+        </div>
 
-          <!-- ================================= CSS -->
-
-          <div class="shadow-lg rounded bg-theme-10 p-2">
-            <h4 class="mb-1.5 text-sm font-bold">CSS:</h4>
-            <div class="flex items-center">
-              <img
-                class="size-6 inline mr-4"
-                src="./images/css3.svg"
-                alt="HTML icon"
-              />
-              <span
-                class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative"
-              >
-                <span
-                  class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[75%] inline-block absolute rounded-md"
-                ></span>
-              </span>
-            </div>
+        <div class="projectCard my-10 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-105 duration-300">
+          <img src="./images/homeDecore.png" alt="homeDecore image" />
+          <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
+            HOMEDECORE.COM
+          </h3>
+          <p class="text-theme-10 text-justify">
+            Home Decore is a clone of Pepperfry that caters the need
+            furnitures, lamps, carpets, home decore at best price. People who
+            are planning to redefine their home and looking for home items can
+            visit.
+          </p>
+          <p class="text-theme-20 font-bold my-3">
+            Tech Stack:
+            <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
+          </p>
+          <div class="text-center flex flex-col gap-4">
+            <button
+              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Visit Website</button><button
+              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Source Code
+            </button>
           </div>
+        </div>
 
-          <!-- ================================= JS -->
-
-          <div class="shadow-lg rounded bg-theme-10 p-2">
-            <h4 class="mb-1.5 text-sm font-bold">JS:</h4>
-            <div class="flex items-center">
-              <img
-                class="size-6 inline mr-4"
-                src="./images/javascript.svg"
-                alt="HTML icon"
-              />
-              <span
-                class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative"
-              >
-                <span
-                  class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[65%] inline-block absolute rounded-md"
-                ></span>
-              </span>
-            </div>
+        <div class="projectCard my-10 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300">
+          <img src="./images/homeDecore.png" alt="homeDecore image" />
+          <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
+            HOMEDECORE.COM
+          </h3>
+          <p class="text-theme-10 text-justify">
+            Home Decore is a clone of Pepperfry that caters the need
+            furnitures, lamps, carpets, home decore at best price. People who
+            are planning to redefine their home and looking for home items can
+            visit.
+          </p>
+          <p class="text-theme-20 font-bold my-3">
+            Tech Stack:
+            <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
+          </p>
+          <div class="text-center flex flex-col gap-4">
+            <button
+              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Visit Website</button><button
+              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Source Code
+            </button>
           </div>
+        </div>
 
-          <!-- ================================= REACT -->
-
-          <div class="shadow-lg rounded bg-theme-10 p-2">
-            <h4 class="mb-1.5 text-sm font-bold">JS:</h4>
-            <div class="flex items-center">
-              <img
-                class="size-6 inline mr-4 bg-blue-900 rounded-lg"
-                src="./images/react.svg"
-                alt="HTML icon"
-              />
-              <span
-                class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative"
-              >
-                <span
-                  class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[60%] inline-block absolute rounded-md"
-                ></span>
-              </span>
-            </div>
+        <div class="projectCard my-10 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300">
+          <img src="./images/homeDecore.png" alt="homeDecore image" />
+          <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
+            HOMEDECORE.COM
+          </h3>
+          <p class="text-theme-10 text-justify">
+            Home Decore is a clone of Pepperfry that caters the need
+            furnitures, lamps, carpets, home decore at best price. People who
+            are planning to redefine their home and looking for home items can
+            visit.
+          </p>
+          <p class="text-theme-20 font-bold my-3">
+            Tech Stack:
+            <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
+          </p>
+          <div class="text-center flex flex-col gap-4">
+            <button
+              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Visit Website</button><button
+              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Source Code
+            </button>
           </div>
+        </div>
 
-          <!-- ================================= REDUX -->
-
-          <div class="shadow-lg rounded bg-theme-10 p-2">
-            <h4 class="mb-1.5 text-sm font-bold">Redux:</h4>
-            <div class="flex items-center">
-              <img
-                class="size-6 inline mr-4"
-                src="./images/redux.svg"
-                alt="HTML icon"
-              />
-              <span
-                class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative"
-              >
-                <span
-                  class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[80%] inline-block absolute rounded-md"
-                ></span>
-              </span>
-            </div>
+        <div class="projectCard my-10 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300">
+          <img src="./images/homeDecore.png" alt="homeDecore image" />
+          <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
+            HOMEDECORE.COM
+          </h3>
+          <p class="text-theme-10 text-justify">
+            Home Decore is a clone of Pepperfry that caters the need
+            furnitures, lamps, carpets, home decore at best price. People who
+            are planning to redefine their home and looking for home items can
+            visit.
+          </p>
+          <p class="text-theme-20 font-bold my-3">
+            Tech Stack:
+            <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
+          </p>
+          <div class="text-center flex flex-col gap-4">
+            <button
+              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Visit Website</button><button
+              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Source Code
+            </button>
           </div>
+        </div>
 
-          <!-- ================================= Tailwind -->
-
-          <div class="shadow-lg rounded bg-theme-10 p-2">
-            <h4 class="mb-1.5 text-sm font-bold">TailWind:</h4>
-            <div class="flex items-center">
-              <img
-                class="size-6 inline mr-4"
-                src="./images/tailwind.png"
-                alt="HTML icon"
-              />
-              <span
-                class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative"
-              >
-                <span
-                  class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[70%] inline-block absolute rounded-md"
-                ></span>
-              </span>
-            </div>
-          </div>
-
-          <!-- ================================= Node.js -->
-
-          <div class="shadow-lg rounded bg-theme-10 p-2">
-            <h4 class="mb-1.5 text-sm font-bold">NodeJS:</h4>
-            <div class="flex items-center">
-              <img
-                class="size-6 inline mr-4"
-                src="./images/node.png"
-                alt="HTML icon"
-              />
-              <span
-                class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative"
-              >
-                <span
-                  class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[55%] inline-block absolute rounded-md"
-                ></span>
-              </span>
-            </div>
-          </div>
-
-          <!-- ================================= Express.js -->
-
-          <div class="shadow-lg rounded bg-theme-10 p-2">
-            <h4 class="mb-1.5 text-sm font-bold">Express.JS:</h4>
-            <div class="flex items-center">
-              <img
-                class="size-6 inline mr-4"
-                src="./images/express.png"
-                alt="HTML icon"
-              />
-              <span
-                class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative"
-              >
-                <span
-                  class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[65%] inline-block absolute rounded-md"
-                ></span>
-              </span>
-            </div>
-          </div>
-
-          <!-- ================================= MongoDB -->
-
-          <div class="shadow-lg rounded bg-theme-10 p-2">
-            <h4 class="mb-1.5 text-sm font-bold">MongoDB:</h4>
-            <div class="flex items-center">
-              <img
-                class="size-6 inline mr-4"
-                src="./images/mongodb.png"
-                alt="HTML icon"
-              />
-              <span
-                class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative"
-              >
-                <span
-                  class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[70%] inline-block absolute rounded-md"
-                ></span>
-              </span>
-            </div>
-          </div>
-
-          <!-- ================================= Next.js -->
-
-          <div class="shadow-lg rounded bg-theme-10 p-2">
-            <h4 class="mb-1.5 text-sm font-bold">Next.JS:</h4>
-            <div class="flex items-center">
-              <img
-                class="size-6 inline mr-4"
-                src="./images/nextjs.svg"
-                alt="HTML icon"
-              />
-              <span
-                class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative"
-              >
-                <span
-                  class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[65%] inline-block absolute rounded-md"
-                ></span>
-              </span>
-            </div>
+        <div class="projectCard my-10 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300">
+          <img src="./images/homeDecore.png" alt="homeDecore image" />
+          <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
+            HOMEDECORE.COM
+          </h3>
+          <p class="text-theme-10 text-justify">
+            Home Decore is a clone of Pepperfry that caters the need
+            furnitures, lamps, carpets, home decore at best price. People who
+            are planning to redefine their home and looking for home items can
+            visit.
+          </p>
+          <p class="text-theme-20 font-bold my-3">
+            Tech Stack:
+            <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
+          </p>
+          <div class="text-center flex flex-col gap-4">
+            <button
+              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Visit Website</button><button
+              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Source Code
+            </button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ========================= SKILLS SECTION ENDS ==================== -->
+  <!-- ========================= PROJECT SECTION ENDS ==================== -->
 
-    <!-- ================== CERTIFICATION SECTION =================== -->
+  <!-- ================== CONTACT SECTION  =================== -->
 
-    <section id="certifications" class="h-auto">
-      <div class="bg-theme-10 p-8 pb-20">
-        <h2 class="text-theme-40 text-3xl text-center m-4">Certifications</h2>
-        <div class="flex flex-col gap-8">
-          <!-- ========================= Full Stack Development -->
-          <div class="certificateWrapper">
-            <h3 class="text-xl text-theme-45 m-3">FSD - Masai School</h3>
-            <a
-              href="https://drive.google.com/file/d/11NyNTycJBf7rNj_rZ1HtVyjq82_pGa_9/view"
-              target="_blank"
-              ><div
-                class="relative w-4/5 m-auto hover:rounded-lg hover:overflow-hidden hover:scale-95 duration-500"
-              >
-                <img
-                  class="m-auto"
-                  src="./images/FSD-certificate.png"
-                  alt="Full Stack Developer certificate"
-                />
-                <img
-                  class="absolute w-full h-full top-0 opacity-60"
-                  src="./images/floral-border.png"
-                  alt="FSD certificate"
-                />
-                <div
-                  class="absolute flex justify-center items-center w-full h-full hover:bg-black top-0 opacity-0 hover:opacity-70 text-white font-bold duration-300"
-                >
-                  <span class="text-2xl hover:bg-black">Click to open</span>
-                </div>
-              </div></a
-            >
-          </div>
-
-          <!-- ========================= Problem Solving -->
-          <div class="certificateWrapper">
-            <h3 class="text-xl text-theme-45 m-3">
-              Problem Solving - HackerRank
-            </h3>
-            <a
-              href="https://www.hackerrank.com/certificates/9048eff47536"
-              target="_blank"
-              ><div
-                class="relative w-4/5 m-auto hover:rounded-lg hover:overflow-hidden hover:scale-95 duration-500"
-              >
-                <img
-                  class="m-auto"
-                  src="./images/problem-solving-certificate.png"
-                  alt="Problem solving certificate"
-                />
-                <img
-                  class="absolute w-full h-full top-0 opacity-60"
-                  src="./images/floral-border.png"
-                  alt="DSA certificate"
-                />
-                <div
-                  class="absolute flex justify-center items-center w-full h-full hover:bg-black top-0 opacity-0 hover:opacity-70 text-white font-bold duration-300"
-                >
-                  <span class="text-2xl hover:bg-black">Visit HackerRank</span>
-                </div>
-              </div></a
-            >
-          </div>
-
-          <!-- ============================= React Basic -->
-          <div class="certificateWrapper">
-            <h3 class="text-xl text-theme-45 m-3">
-              React (Basic) - HackerRank
-            </h3>
-            <a
-              href="https://www.hackerrank.com/certificates/4e42e420edea"
-              target="_blank"
-              ><div
-                class="relative w-4/5 m-auto hover:rounded-lg hover:overflow-hidden hover:scale-95 duration-500"
-              >
-                <img
-                  class="m-auto"
-                  src="./images/react-basic-certificate.png"
-                  alt="react certificate"
-                />
-                <img
-                  class="absolute w-full h-full top-0 opacity-60"
-                  src="./images/floral-border.png"
-                  alt="React certificate"
-                />
-                <div
-                  class="absolute flex justify-center items-center w-full h-full hover:bg-black top-0 opacity-0 hover:opacity-70 text-white font-bold duration-300"
-                >
-                  <span class="text-2xl hover:bg-black">Visit HackerRank</span>
-                </div>
-              </div></a
-            >
-          </div>
-
-          <!-- ============================= Javascript Basic -->
-          <div class="certificateWrapper">
-            <h3 class="text-xl text-theme-45 m-3">
-              JavaScript (Basic) - HackerRank
-            </h3>
-            <a
-              href="https://www.hackerrank.com/certificates/765c94873e55"
-              target="_blank"
-              ><div
-                class="relative w-4/5 m-auto hover:rounded-lg hover:overflow-hidden hover:scale-95 duration-500"
-              >
-                <img
-                  class="m-auto"
-                  src="./images/js-basic-certificate.png"
-                  alt="react certificate"
-                />
-                <img
-                  class="absolute w-full h-full top-0 opacity-60"
-                  src="./images/floral-border.png"
-                  alt="floral border"
-                />
-                <div
-                  class="absolute flex justify-center items-center w-full h-full hover:bg-black top-0 opacity-0 hover:opacity-70 text-white font-bold duration-300"
-                >
-                  <span class="text-2xl hover:bg-black">Visit HackerRank</span>
-                </div>
-              </div></a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= CERTIFICATION SECTION ENDS ==================== -->
-
-    <!-- ================== Project Section =================== -->
-
-    <section id="projects" class="h-auto">
-      <div class="bg-theme-20 p-8 pb-4">
-        <h2 class="text-3xl text-center m-8 text-theme-45">Projects</h2>
-        <div id="projectWrapper">
-          <div
-            class="projectCard my-5 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300"
-          >
-            <img src="./images/homeDecore.png" alt="homeDecore image" />
-            <h3 class="text-center text-theme-45 font-bold m-4 text-xl">
-              HOMEDECORE.COM
-            </h3>
-            <p class="text-theme-10 text-justify">
-              Home Decore is a clone of Pepperfry that caters the need
-              furnitures, lamps, carpets, home decore at best price. People who
-              are planning to redefine their home and looking for home items can
-              visit.
-            </p>
-            <p class="text-theme-20 font-bold my-3">
-              Tech Stack:
-              <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
-            </p>
-            <div class="text-center flex flex-col gap-4">
-              <button
-                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
-              >
-                Visit Website</button
-              ><button
-                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
-              >
-                Source Code
-              </button>
-            </div>
-          </div>
-
-          <div
-            class="projectCard my-20 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-105 duration-300"
-          >
-            <img src="./images/homeDecore.png" alt="homeDecore image" />
-            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
-              HOMEDECORE.COM
-            </h3>
-            <p class="text-theme-10 text-justify">
-              Home Decore is a clone of Pepperfry that caters the need
-              furnitures, lamps, carpets, home decore at best price. People who
-              are planning to redefine their home and looking for home items can
-              visit.
-            </p>
-            <p class="text-theme-20 font-bold my-3">
-              Tech Stack:
-              <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
-            </p>
-            <div class="text-center flex flex-col gap-4">
-              <button
-                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
-              >
-                Visit Website</button
-              ><button
-                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
-              >
-                Source Code
-              </button>
-            </div>
-          </div>
-
-          <div
-            class="projectCard my-20 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300"
-          >
-            <img src="./images/homeDecore.png" alt="homeDecore image" />
-            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
-              HOMEDECORE.COM
-            </h3>
-            <p class="text-theme-10 text-justify">
-              Home Decore is a clone of Pepperfry that caters the need
-              furnitures, lamps, carpets, home decore at best price. People who
-              are planning to redefine their home and looking for home items can
-              visit.
-            </p>
-            <p class="text-theme-20 font-bold my-3">
-              Tech Stack:
-              <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
-            </p>
-            <div class="text-center flex flex-col gap-4">
-              <button
-                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
-              >
-                Visit Website</button
-              ><button
-                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
-              >
-                Source Code
-              </button>
-            </div>
-          </div>
-
-          <div
-            class="projectCard my-20 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300"
-          >
-            <img src="./images/homeDecore.png" alt="homeDecore image" />
-            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
-              HOMEDECORE.COM
-            </h3>
-            <p class="text-theme-10 text-justify">
-              Home Decore is a clone of Pepperfry that caters the need
-              furnitures, lamps, carpets, home decore at best price. People who
-              are planning to redefine their home and looking for home items can
-              visit.
-            </p>
-            <p class="text-theme-20 font-bold my-3">
-              Tech Stack:
-              <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
-            </p>
-            <div class="text-center flex flex-col gap-4">
-              <button
-                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
-              >
-                Visit Website</button
-              ><button
-                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
-              >
-                Source Code
-              </button>
-            </div>
-          </div>
-
-          <div
-            class="projectCard my-20 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300"
-          >
-            <img src="./images/homeDecore.png" alt="homeDecore image" />
-            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
-              HOMEDECORE.COM
-            </h3>
-            <p class="text-theme-10 text-justify">
-              Home Decore is a clone of Pepperfry that caters the need
-              furnitures, lamps, carpets, home decore at best price. People who
-              are planning to redefine their home and looking for home items can
-              visit.
-            </p>
-            <p class="text-theme-20 font-bold my-3">
-              Tech Stack:
-              <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
-            </p>
-            <div class="text-center flex flex-col gap-4">
-              <button
-                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
-              >
-                Visit Website</button
-              ><button
-                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
-              >
-                Source Code
-              </button>
-            </div>
-          </div>
-
-          <div
-            class="projectCard my-20 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-110 duration-300"
-          >
-            <img src="./images/homeDecore.png" alt="homeDecore image" />
-            <h3 class="text-center text-theme-20 font-bold m-4 text-xl">
-              HOMEDECORE.COM
-            </h3>
-            <p class="text-theme-10 text-justify">
-              Home Decore is a clone of Pepperfry that caters the need
-              furnitures, lamps, carpets, home decore at best price. People who
-              are planning to redefine their home and looking for home items can
-              visit.
-            </p>
-            <p class="text-theme-20 font-bold my-3">
-              Tech Stack:
-              <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
-            </p>
-            <div class="text-center flex flex-col gap-4">
-              <button
-                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
-              >
-                Visit Website</button
-              ><button
-                class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20"
-              >
-                Source Code
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= PROJECT SECTION ENDS ==================== -->
-
-    <!-- ================== CONTACT SECTION  =================== -->
-
-    <section id="contact">
-      <div class="bg-theme-45 h-auto p-8">
-        <h2 class="text-theme-10 text-3xl text-center m-8">Contact Me</h2>
-        <div id="formWrapper">
-          <div id="formContainer" class="w-11/12 m-auto text-theme-20"><form>
+  <section id="contact">
+    <div class="bg-theme-45 h-auto p-8">
+      <h2 class="text-theme-10 text-3xl text-center m-8">Contact Me</h2>
+      <div id="formWrapper" class="">
+        <div id="formContainer" class="w-11/12 m-auto text-theme-20 border-2 border-theme-30 p-4 rounded-lg sm:p-8 sm:w-8/12 shadow-theme-40 shadow-md">
+          <form>
             <label for="userName">Name:</label>
             <br>
             <input type="text" name="name" id="userName" class="w-full rounded bg-theme-10 h-7 p-1 text-theme-45">
@@ -773,72 +559,49 @@
             <br>
             <textarea name="message" id="userMessage" class="w-full rounded bg-theme-10 text-theme-45 p-1"></textarea>
             <br>
-            <input type="submit" value="Send Now" class="bg-theme-20 text-theme-45 p-2 rounded-lg mt-4 block m-auto w-1/2 hover:pointer hover:bg-theme-40 hover:text-theme-10 duration-300">
-              
-          </form></div>
+            <input type="submit" value="Send Now"
+              class="bg-theme-20 text-theme-45 p-2 rounded-lg mt-4 block m-auto w-1/2 hover:pointer hover:bg-theme-40 hover:text-theme-10 duration-300">
 
-          <div id="socialLinksContainer">
-            <div class="flex justify-around  mt-7">
-              <a
-                class="hover:scale-125 duration-300"
-                href="mailto:2017arun.rana@gmail.com"
-                target="_blank"
-              >
-                <img
-                  class="size-10"
-                  src="./images/gmail-logo-60.png"
-                  alt="gmail icon"
-                />
-              </a>
-              <a
-                class="hover:scale-125 duration-300"
-                href="tel:+91-9868494572"
-                target="_blank"
-                ><img class="size-10" src="./images/phone-60.png" alt="phone icon"
-              /></a>
-              <a
-                class="hover:scale-125 duration-300"
-                href="https://github.com/arun24hrs"
-                target="_blank"
-                ><img
-                  class="size-10"
-                  src="./images/github-60.png"
-                  alt="github icon"
-              /></a>
-              <a
-                class="hover:scale-125 duration-300"
-                href="https://www.linkedin.com/in/arun-kr-rana/"
-                target="_blank"
-                ><img
-                  class="size-10"
-                  src="./images/linkedin-60.png"
-                  alt="linkedin icon"
-              /></a>
-            </div>
+          </form>
+        </div>
+
+        <div id="socialLinksContainer">
+          <div class="flex justify-around mt-10 md:w-8/12 m-auto">
+            <a class="hover:scale-125 duration-300" href="mailto:2017arun.rana@gmail.com" target="_blank">
+              <img class="size-10" src="./images/gmail-logo-60.png" alt="gmail icon" />
+            </a>
+            <a class="hover:scale-125 duration-300" href="tel:+91-9868494572" target="_blank"><img class="size-10"
+                src="./images/phone-60.png" alt="phone icon" /></a>
+            <a class="hover:scale-125 duration-300" href="https://github.com/arun24hrs" target="_blank"><img
+                class="size-10" src="./images/github-60.png" alt="github icon" /></a>
+            <a class="hover:scale-125 duration-300" href="https://www.linkedin.com/in/arun-kr-rana/"
+              target="_blank"><img class="size-10" src="./images/linkedin-60.png" alt="linkedin icon" /></a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="bg-theme-10 text-center p-3">
-      <p class="text-theme-45">Made with ❤️ by Arun Kumar Rana</p>
-    </footer>
+  <footer class="bg-theme-10 text-center p-3">
+    <p class="text-theme-45">Made with ❤️ by Arun Kumar Rana</p>
+  </footer>
 
-  </body>
+</body>
 
-  <script>
-    let menu = document.getElementById("menu");
-    let open = document.getElementById("menuOpen");
-    let close = document.getElementById("menuClose");
-    const handleMenuOpen = () => {
-      menu.style.display = "block";
-      open.style.display = "none";
-      close.style.display = "block";
-    };
-    const handleMenuClose = () => {
-      menu.style.display = "none";
-      open.style.display = "block";
-      close.style.display = "none";
-    };
-  </script>
+<script>
+  let menu = document.getElementById("mobileMenu");
+  let open = document.getElementById("menuOpen");
+  let close = document.getElementById("menuClose");
+  const handleMenuOpen = () => {
+    menu.style.display = "block";
+    open.style.display = "none";
+    close.style.display = "block";
+  };
+  const handleMenuClose = () => {
+    menu.style.display = "none";
+    open.style.display = "block";
+    close.style.display = "none";
+  };
+</script>
+
 </html>
