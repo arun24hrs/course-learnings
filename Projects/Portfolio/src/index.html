@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" id="doc">
 
 <head>
   <meta charset="UTF-8" />
@@ -18,7 +18,7 @@
 <body class="w-full">
   <!-- ========= NAVBAR ========= -->
 
-  <nav class="flex flex-col bg-theme-45 p-2 sticky top-0 z-20 border-b border-white">
+  <nav class="flex flex-col bg-theme-45 p-2 sticky top-0 z-20 border-b border-white dark:bg-gray-800">
     <div class="flex justify-between align-middle">
       <img class="w-32 sm:w-40" src="./images/logo.png" alt="logo" />
       <div id="menu" class="hidden sm:block">
@@ -41,7 +41,7 @@
         </ul>
       </div>
       <div id="checkbox" class="flex justify-center align-middle sm:px-4">
-        <input type="checkbox" id="check1" class="toggle" />
+        <input type="checkbox" id="check1" class="toggle" onchange="themechange()"/>
         <label for="check1"></label>
       </div>
       <img src="./images/icons8-cross-50.png" id="menuClose" class="size-7 m-3 hidden" onclick="handleMenuClose()"
@@ -75,12 +75,12 @@
   <!-- ========= HEADER ========= -->
 
   <header>
-    <div class="h-[65vh] bg-theme-10 flex flex-col items-center pt-12 lg:h-[80vh] ">
+    <div class="h-[65vh] bg-theme-10 flex flex-col items-center pt-12 lg:h-[80vh] dark:bg-gray-700">
       <img class="w-6/12 rounded-3xl sm:w-2/5 lg:w-3/12" src="./images/intro img.gif" alt="" />
-      <h1 class="text-3xl font-bold text-theme-45 text-center mt-8">
+      <h1 class="text-3xl font-bold text-theme-45 text-center mt-8 dark:text-theme-20">
         Hi👋🏼, I am Arun Kr. Rana
       </h1>
-      <h2 class="text-xl font-bold text-theme-40 text-center mt-4 before:content-['<'] after:content-['/>']">
+      <h2 class="text-xl font-bold text-theme-40 text-center mt-4 before:content-['<'] after:content-['/>'] dark:text-theme-30">
         A Full Stack Web Developer
       </h2>
       <div class="flex gap-6 mt-7">
@@ -109,7 +109,7 @@
   <!-- ========== ABOUT SECTION ========== -->
 
   <section id="about">
-    <div class="bg-theme-45 h-auto p-8 text-center">
+    <div class="bg-theme-45 h-auto p-8 text-center dark:bg-gray-800">
       <h2 class="text-theme-10 text-3xl text-center m-8 ">About Me</h2>
       <div class="lg:flex lg:gap-10 lg:mb-20">
         <img class="rounded-3xl mb-5 m-auto w-6/12 sm:4/12 lg:w-3/12" src="./images/dp.jpg" alt="profile image" />
@@ -132,7 +132,8 @@
               Read More
             </button>
             <br class="lg:hidden">
-            <button class="mt-8 bg-theme-30 btn text-theme-45 hover:bg-theme-40 hover:text-theme-20 hover:scale-x-105">
+
+            <a target="_blank" href="https://onedrive.live.com/?authkey=%21APPnB2xqw7OqITI&id=AF845DF2745D14AF%213785&cid=AF845DF2745D14AF&parId=root&parQt=sharedby&o=OneUp"><button class="mt-8 bg-theme-30 btn text-theme-45 hover:bg-theme-40 hover:text-theme-20 hover:scale-x-105">
               Resume<svg width="512" height="512" viewBox="0 0 512 512" style="color: currentColor"
                 xmlns="http://www.w3.org/2000/svg" class="size-8 inline">
                 <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
@@ -147,7 +148,7 @@
                   </g>
                 </svg>
               </svg>
-            </button>
+            </button></a>
           </div>
         </div>
       </div>
@@ -160,15 +161,15 @@
   <!-- =========== Skills Sections ============ -->
 
   <section id="skills">
-    <div class="h-auto p-10">
+    <div class="h-auto p-10 dark:bg-gray-900">
       <h2 class="text-theme-40 text-3xl text-center m-4">Skills</h2>
       <div id="progressBar" class="flex flex-col gap-6 mt-10 sm:grid sm:grid-cols-2 sm:mb-10 lg:gap-12 lg:w-10/12 m-auto">
         <!-- ============================ HTML -->
-        <div class="shadow-lg rounded bg-theme-10 p-2">
-          <h4 class="mb-1.5 text-sm font-bold">HTML:</h4>
+        <div class="shadow-lg rounded bg-theme-10 p-2 dark:bg-gray-600">
+          <h4 class="mb-1.5 text-sm font-bold dark:text-gray-900">HTML:</h4>
           <div class="flex items-center">
             <img class="size-6 inline mr-4" src="./images/html5.svg" alt="HTML icon" />
-            <span class="w-full text-white text-xs h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
+            <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
               <span
                 class="h-full bg-gradient-to-r to-theme-20 from-30% via-theme-30 from-theme-40 bg-theme-40 w-[90%] inline-block absolute rounded-md"></span>
             </span>
@@ -177,8 +178,8 @@
 
         <!-- ================================= CSS -->
 
-        <div class="shadow-lg rounded bg-theme-10 p-2">
-          <h4 class="mb-1.5 text-sm font-bold">CSS:</h4>
+        <div class="shadow-lg rounded bg-theme-10 p-2 dark:bg-gray-600">
+          <h4 class="mb-1.5 text-sm font-bold dark:text-gray-900">CSS:</h4>
           <div class="flex items-center">
             <img class="size-6 inline mr-4" src="./images/css3.svg" alt="HTML icon" />
             <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
@@ -190,8 +191,8 @@
 
         <!-- ================================= JS -->
 
-        <div class="shadow-lg rounded bg-theme-10 p-2">
-          <h4 class="mb-1.5 text-sm font-bold">JS:</h4>
+        <div class="shadow-lg rounded bg-theme-10 p-2 dark:bg-gray-600">
+          <h4 class="mb-1.5 text-sm font-bold dark:text-gray-900">JS:</h4>
           <div class="flex items-center">
             <img class="size-6 inline mr-4" src="./images/javascript.svg" alt="HTML icon" />
             <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
@@ -203,8 +204,8 @@
 
         <!-- ================================= REACT -->
 
-        <div class="shadow-lg rounded bg-theme-10 p-2">
-          <h4 class="mb-1.5 text-sm font-bold">JS:</h4>
+        <div class="shadow-lg rounded bg-theme-10 p-2 dark:bg-gray-600">
+          <h4 class="mb-1.5 text-sm font-bold dark:text-gray-900">JS:</h4>
           <div class="flex items-center">
             <img class="size-6 inline mr-4 bg-blue-900 rounded-lg" src="./images/react.svg" alt="HTML icon" />
             <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
@@ -216,8 +217,8 @@
 
         <!-- ================================= REDUX -->
 
-        <div class="shadow-lg rounded bg-theme-10 p-2">
-          <h4 class="mb-1.5 text-sm font-bold">Redux:</h4>
+        <div class="shadow-lg rounded bg-theme-10 p-2 dark:bg-gray-600">
+          <h4 class="mb-1.5 text-sm font-bold dark:text-gray-900">Redux:</h4>
           <div class="flex items-center">
             <img class="size-6 inline mr-4" src="./images/redux.svg" alt="HTML icon" />
             <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
@@ -229,8 +230,8 @@
 
         <!-- ================================= Tailwind -->
 
-        <div class="shadow-lg rounded bg-theme-10 p-2">
-          <h4 class="mb-1.5 text-sm font-bold">TailWind:</h4>
+        <div class="shadow-lg rounded bg-theme-10 p-2 dark:bg-gray-600">
+          <h4 class="mb-1.5 text-sm font-bold dark:text-gray-900">TailWind:</h4>
           <div class="flex items-center">
             <img class="size-6 inline mr-4" src="./images/tailwind.png" alt="HTML icon" />
             <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
@@ -242,8 +243,8 @@
 
         <!-- ================================= Node.js -->
 
-        <div class="shadow-lg rounded bg-theme-10 p-2">
-          <h4 class="mb-1.5 text-sm font-bold">NodeJS:</h4>
+        <div class="shadow-lg rounded bg-theme-10 p-2 dark:bg-gray-600">
+          <h4 class="mb-1.5 text-sm font-bold dark:text-gray-900">NodeJS:</h4>
           <div class="flex items-center">
             <img class="size-6 inline mr-4" src="./images/node.png" alt="HTML icon" />
             <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
@@ -255,8 +256,8 @@
 
         <!-- ================================= Express.js -->
 
-        <div class="shadow-lg rounded bg-theme-10 p-2">
-          <h4 class="mb-1.5 text-sm font-bold">Express.JS:</h4>
+        <div class="shadow-lg rounded bg-theme-10 p-2 dark:bg-gray-600">
+          <h4 class="mb-1.5 text-sm font-bold dark:text-gray-900">Express.JS:</h4>
           <div class="flex items-center">
             <img class="size-6 inline mr-4" src="./images/express.png" alt="HTML icon" />
             <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
@@ -268,8 +269,8 @@
 
         <!-- ================================= MongoDB -->
 
-        <div class="shadow-lg rounded bg-theme-10 p-2">
-          <h4 class="mb-1.5 text-sm font-bold">MongoDB:</h4>
+        <div class="shadow-lg rounded bg-theme-10 p-2 dark:bg-gray-600">
+          <h4 class="mb-1.5 text-sm font-bold dark:text-gray-900">MongoDB:</h4>
           <div class="flex items-center">
             <img class="size-6 inline mr-4" src="./images/mongodb.png" alt="HTML icon" />
             <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
@@ -281,8 +282,8 @@
 
         <!-- ================================= Next.js -->
 
-        <div class="shadow-lg rounded bg-theme-10 p-2">
-          <h4 class="mb-1.5 text-sm font-bold">Next.JS:</h4>
+        <div class="shadow-lg rounded bg-theme-10 p-2 dark:bg-gray-600">
+          <h4 class="mb-1.5 text-sm font-bold dark:text-gray-900">Next.JS:</h4>
           <div class="flex items-center">
             <img class="size-6 inline mr-4" src="./images/nextjs.svg" alt="HTML icon" />
             <span class="w-full h-3 bg-theme-45 inline-block rounded-2xl overflow-hidden relative">
@@ -300,12 +301,12 @@
   <!-- ================== CERTIFICATION SECTION =================== -->
 
   <section id="certifications" class="h-auto">
-    <div class="bg-theme-10 p-8 pb-20">
+    <div class="bg-theme-10 p-8 pb-20 dark:bg-gray-800">
       <h2 class="text-theme-40 text-3xl text-center m-4">Certifications</h2>
       <div class="flex flex-col gap-8 md:grid grid-cols-2">
         <!-- ========================= Full Stack Development -->
         <div class="certificateWrapper">
-          <h3 class="text-xl text-theme-45 m-3">FSD - Masai School</h3>
+          <h3 class="text-xl text-theme-45 m-3 dark:text-theme-20">FSD - Masai School</h3>
           <a href="https://drive.google.com/file/d/11NyNTycJBf7rNj_rZ1HtVyjq82_pGa_9/view" target="_blank">
             <div class="relative w-4/5 m-auto hover:rounded-lg hover:overflow-hidden hover:scale-95 duration-500">
               <img class="m-auto" src="./images/FSD-certificate.png" alt="Full Stack Developer certificate" />
@@ -321,7 +322,7 @@
 
         <!-- ========================= Problem Solving -->
         <div class="certificateWrapper">
-          <h3 class="text-xl text-theme-45 m-3">
+          <h3 class="text-xl text-theme-45 m-3 dark:text-theme-20">
             Problem Solving - HackerRank
           </h3>
           <a href="https://www.hackerrank.com/certificates/9048eff47536" target="_blank">
@@ -339,7 +340,7 @@
 
         <!-- ============================= React Basic -->
         <div class="certificateWrapper">
-          <h3 class="text-xl text-theme-45 m-3">
+          <h3 class="text-xl text-theme-45 m-3 dark:text-theme-20">
             React (Basic) - HackerRank
           </h3>
           <a href="https://www.hackerrank.com/certificates/4e42e420edea" target="_blank">
@@ -357,7 +358,7 @@
 
         <!-- ============================= Javascript Basic -->
         <div class="certificateWrapper">
-          <h3 class="text-xl text-theme-45 m-3">
+          <h3 class="text-xl text-theme-45 m-3 dark:text-theme-20">
             JavaScript (Basic) - HackerRank
           </h3>
           <a href="https://www.hackerrank.com/certificates/765c94873e55" target="_blank">
@@ -381,8 +382,8 @@
   <!-- ================== Project Section =================== -->
 
   <section id="projects" class="h-auto">
-    <div class="bg-theme-20 p-8 pb-4">
-      <h2 class="text-3xl text-center m-8 text-theme-45">Projects</h2>
+    <div class="bg-theme-20 p-8 pb-4 dark:bg-gray-700">
+      <h2 class="text-3xl text-center m-8 text-theme-45 dark:text-theme-20">Projects</h2>
       <div id="projectWrapper" class="sm:grid sm:grid-cols-2">
         <div class="projectCard my-10 bg-theme-45 p-4 rounded-xl w-11/12 m-auto hover:scale-105 duration-300">
           <img src="./images/homeDecore.png" alt="homeDecore image" />
@@ -399,13 +400,14 @@
             Tech Stack:
             <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
           </p>
-          <div class="text-center flex flex-col gap-4">
-            <button
-              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
-              Visit Website</button><button
-              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
-              Source Code
-            </button>
+          <div class="text-center flex flex-col gap-4 w-3/5 m-auto">
+            <a class="w-full" target="_blank" href="https://home-interior-capitaln.vercel.app/"><button
+              class="bg-theme-40 px-8 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Visit Website</button></a>
+              <a target="_blank" href="https://github.com/OnkarK0273/koovs-Website-Clone"><button
+                class="bg-theme-40 px-8 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+                Source Code
+              </button></a>
           </div>
         </div>
 
@@ -424,13 +426,13 @@
             Tech Stack:
             <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
           </p>
-          <div class="text-center flex flex-col gap-4">
-            <button
-              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
-              Visit Website</button><button
-              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
-              Source Code
-            </button>
+          <div class="text-center flex flex-col gap-4 w-3/5 m-auto">
+            <a class="w-full" target="_blank" href="https://home-interior-capitaln.vercel.app/"><button
+              class="bg-theme-40 px-8 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Visit Website</button></a><a target="_blank" href="https://github.com/OnkarK0273/koovs-Website-Clone"><button
+                class="bg-theme-40 px-8 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+                Source Code
+              </button></a>
           </div>
         </div>
 
@@ -449,13 +451,13 @@
             Tech Stack:
             <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
           </p>
-          <div class="text-center flex flex-col gap-4">
-            <button
-              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
-              Visit Website</button><button
-              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
-              Source Code
-            </button>
+          <div class="text-center flex flex-col gap-4 w-3/5 m-auto">
+            <a class="w-full" target="_blank" href="https://home-interior-capitaln.vercel.app/"><button
+              class="bg-theme-40 px-8 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Visit Website</button></a><a target="_blank" href="https://github.com/OnkarK0273/koovs-Website-Clone"><button
+                class="bg-theme-40 px-8 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+                Source Code
+              </button></a>
           </div>
         </div>
 
@@ -474,13 +476,13 @@
             Tech Stack:
             <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
           </p>
-          <div class="text-center flex flex-col gap-4">
-            <button
-              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
-              Visit Website</button><button
-              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
-              Source Code
-            </button>
+          <div class="text-center flex flex-col gap-4 w-3/5 m-auto">
+            <a class="w-full" target="_blank" href="https://home-interior-capitaln.vercel.app/"><button
+              class="bg-theme-40 px-8 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Visit Website</button></a><a target="_blank" href="https://github.com/OnkarK0273/koovs-Website-Clone"><button
+                class="bg-theme-40 px-8 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+                Source Code
+              </button></a>
           </div>
         </div>
 
@@ -499,13 +501,13 @@
             Tech Stack:
             <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
           </p>
-          <div class="text-center flex flex-col gap-4">
-            <button
-              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
-              Visit Website</button><button
-              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
-              Source Code
-            </button>
+          <div class="text-center flex flex-col gap-4 w-3/5 m-auto">
+            <a class="w-full" target="_blank" href="https://home-interior-capitaln.vercel.app/"><button
+              class="bg-theme-40 px-8 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Visit Website</button></a><a target="_blank" href="https://github.com/OnkarK0273/koovs-Website-Clone"><button
+                class="bg-theme-40 px-8 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+                Source Code
+              </button></a>
           </div>
         </div>
 
@@ -524,13 +526,13 @@
             Tech Stack:
             <span class="text-theme-10 font-normal">Next.js, CSS, Redux</span>
           </p>
-          <div class="text-center flex flex-col gap-4">
-            <button
-              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
-              Visit Website</button><button
-              class="bg-theme-40 px-4 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
-              Source Code
-            </button>
+          <div class="text-center flex flex-col gap-4 w-3/5 m-auto">
+            <a class="w-full" target="_blank" href="https://home-interior-capitaln.vercel.app/"><button
+              class="bg-theme-40 px-8 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+              Visit Website</button></a><a target="_blank" href="https://github.com/OnkarK0273/koovs-Website-Clone"><button
+                class="bg-theme-40 px-8 text-sm py-2 rounded-3xl text-theme-20 hover:text-theme-45 duration-300 hover:bg-theme-20">
+                Source Code
+              </button></a>
           </div>
         </div>
       </div>
@@ -542,22 +544,22 @@
   <!-- ================== CONTACT SECTION  =================== -->
 
   <section id="contact">
-    <div class="bg-theme-45 h-auto p-8">
+    <div class="bg-theme-45 h-auto p-8 dark:bg-gray-800">
       <h2 class="text-theme-10 text-3xl text-center m-8">Contact Me</h2>
       <div id="formWrapper" class="">
-        <div id="formContainer" class="w-11/12 m-auto text-theme-20 border-2 border-theme-30 p-4 rounded-lg sm:p-8 sm:w-8/12 shadow-theme-40 shadow-md">
+        <div id="formContainer" class="w-11/12 m-auto text-theme-20 border-2 border-theme-30 p-4 rounded-lg sm:p-8 sm:w-8/12 md:w-5/12 shadow-theme-40 shadow-md">
           <form>
-            <label for="userName">Name:</label>
+            <label for="userName" class="mt-3 inline-block py-1">Name:</label>
             <br>
-            <input type="text" name="name" id="userName" class="w-full rounded bg-theme-10 h-7 p-1 text-theme-45">
+            <input type="text" name="name" id="userName" class="w-full rounded bg-theme-10 h-10 p-1 text-theme-45">
             <br>
-            <label for="userEmail" class="mt-3 inline-block">Email:</label>
+            <label for="userEmail" class="mt-3 inline-block py-1">Email:</label>
             <br>
-            <input type="email" name="email" id="userEmail" class="w-full rounded bg-theme-10 h-7 p-1 text-theme-45">
+            <input type="email" name="email" id="userEmail" class="w-full rounded bg-theme-10 h-10 p-1 text-theme-45">
             <br>
-            <label for="userMessage" class="mt-3 inline-block">Message:</label>
+            <label for="userMessage" class="mt-3 inline-block py-1">Message:</label>
             <br>
-            <textarea name="message" id="userMessage" class="w-full rounded bg-theme-10 text-theme-45 p-1"></textarea>
+            <textarea name="message" id="userMessage" class="w-full rounded bg-theme-10 text-theme-45 p-1 h-24"></textarea>
             <br>
             <input type="submit" value="Send Now"
               class="bg-theme-20 text-theme-45 p-2 rounded-lg mt-4 block m-auto w-1/2 hover:pointer hover:bg-theme-40 hover:text-theme-10 duration-300">
@@ -582,8 +584,8 @@
     </div>
   </section>
 
-  <footer class="bg-theme-10 text-center p-3">
-    <p class="text-theme-45">Made with ❤️ by Arun Kumar Rana</p>
+  <footer class="bg-theme-10 text-center p-3 dark:bg-gray-700">
+    <p class="text-theme-45 dark:text-theme-30">Made with ❤️ by Arun Kumar Rana</p>
   </footer>
 
 </body>
@@ -591,6 +593,7 @@
 <script>
   let menu = document.getElementById("mobileMenu");
   let open = document.getElementById("menuOpen");
+  let theHTMLtag = document.getElementById('doc');
   let close = document.getElementById("menuClose");
   const handleMenuOpen = () => {
     menu.style.display = "block";
@@ -602,6 +605,15 @@
     open.style.display = "block";
     close.style.display = "none";
   };
+  // themeToggle.addEventListener('change', themechange)
+  function themechange(){
+    let themeToggle = document.getElementById("check1");
+    if(themeToggle.checked){
+      theHTMLtag.setAttribute("class", "dark");
+    } else {
+      theHTMLtag.classList.remove("dark");
+    }
+  }
 </script>
 
 </html>
