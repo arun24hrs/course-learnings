@@ -567,24 +567,25 @@
           </form>
         </div>
 
-        <div id="socialLinksContainer">
-          <div class="flex justify-around mt-10 md:w-8/12 m-auto">
-            <a class="hover:scale-125 duration-300" href="mailto:2017arun.rana@gmail.com" target="_blank">
-              <img class="size-10" src="./images/gmail-logo-60.png" alt="gmail icon" />
-            </a>
-            <a class="hover:scale-125 duration-300" href="tel:+91-9868494572" target="_blank"><img class="size-10"
-                src="./images/phone-60.png" alt="phone icon" /></a>
-            <a class="hover:scale-125 duration-300" href="https://github.com/arun24hrs" target="_blank"><img
-                class="size-10" src="./images/github-60.png" alt="github icon" /></a>
-            <a class="hover:scale-125 duration-300" href="https://www.linkedin.com/in/arun-kr-rana/"
-              target="_blank"><img class="size-10" src="./images/linkedin-60.png" alt="linkedin icon" /></a>
-          </div>
-        </div>
+        
       </div>
     </div>
   </section>
 
   <footer class="bg-theme-10 text-center p-3 dark:bg-gray-700">
+    <div id="socialLinksContainer">
+      <div class="flex justify-around my-6 md:w-8/12 m-auto">
+        <a class="hover:scale-125 duration-300" href="mailto:2017arun.rana@gmail.com" target="_blank">
+          <img class="size-10" src="./images/gmail-logo-60.png" alt="gmail icon" />
+        </a>
+        <a class="hover:scale-125 duration-300" href="tel:+91-9868494572" target="_blank"><img class="size-10"
+            src="./images/phone-60.png" alt="phone icon" /></a>
+        <a class="hover:scale-125 duration-300" href="https://github.com/arun24hrs" target="_blank"><img
+            class="size-10" src="./images/github-60.png" alt="github icon" /></a>
+        <a class="hover:scale-125 duration-300" href="https://www.linkedin.com/in/arun-kr-rana/"
+          target="_blank"><img class="size-10" src="./images/linkedin-60.png" alt="linkedin icon" /></a>
+      </div>
+    </div>
     <p class="text-theme-45 dark:text-theme-30">Made with ❤️ by Arun Kumar Rana</p>
   </footer>
 
@@ -607,6 +608,7 @@
   };
   // themeToggle.addEventListener('change', themechange)
   function themechange(){
+    event.preventDefault();
     let themeToggle = document.getElementById("check1");
     if(themeToggle.checked){
       theHTMLtag.setAttribute("class", "dark");
