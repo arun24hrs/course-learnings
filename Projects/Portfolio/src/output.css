@@ -1404,39 +1404,37 @@ input[type="checkbox"].toggle:disabled + label::after {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .dark\:bg-gray-600 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(75 85 99 / var(--tw-bg-opacity));
-  }
+.dark\:bg-gray-600:where(.dark, .dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
 
-  .dark\:bg-gray-700 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-  }
+.dark\:bg-gray-700:where(.dark, .dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
 
-  .dark\:bg-gray-800 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-  }
+.dark\:bg-gray-800:where(.dark, .dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
 
-  .dark\:bg-gray-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-  }
+.dark\:bg-gray-900:where(.dark, .dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
 
-  .dark\:text-gray-900 {
-    --tw-text-opacity: 1;
-    color: rgb(17 24 39 / var(--tw-text-opacity));
-  }
+.dark\:text-gray-900:where(.dark, .dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
 
-  .dark\:text-theme-20 {
-    --tw-text-opacity: 1;
-    color: rgb(252 191 73 / var(--tw-text-opacity));
-  }
+.dark\:text-theme-20:where(.dark, .dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(252 191 73 / var(--tw-text-opacity));
+}
 
-  .dark\:text-theme-30 {
-    --tw-text-opacity: 1;
-    color: rgb(247 127 0 / var(--tw-text-opacity));
-  }
+.dark\:text-theme-30:where(.dark, .dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(247 127 0 / var(--tw-text-opacity));
 }
