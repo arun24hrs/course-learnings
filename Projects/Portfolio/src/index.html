@@ -18,7 +18,7 @@
 <body class="w-full">
   <!-- ========= NAVBAR ========= -->
 
-  <nav class="flex flex-col bg-theme-45 p-2 sticky top-0 z-20 border-b border-white dark:bg-gray-800">
+  <nav id="home" class="flex flex-col bg-theme-45 p-2 sticky top-0 z-20 border-b border-white dark:bg-gray-800">
     <div class="flex justify-between align-middle">
       <img class="w-32 sm:w-40" src="./images/logo.png" alt="logo" />
       <div id="menu" class="hidden sm:block">
@@ -33,7 +33,7 @@
             <a href="#skills">Skills</a>
           </li>
           <li class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500">
-            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
           </li>
           <li class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500">
             <a href="#contact">Contact</a>
@@ -61,7 +61,7 @@
           <a href="#skills">Skills</a>
         </li>
         <li class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500">
-          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
         </li>
         <li class="hover:text-theme-30 hover:scale-125 hover:cursor-pointer ease-in-out duration-500">
           <a href="#contact">Contact</a>
@@ -593,7 +593,6 @@
 <script>
   let menu = document.getElementById("mobileMenu");
   let open = document.getElementById("menuOpen");
-  let theHTMLtag = document.getElementById('doc');
   let close = document.getElementById("menuClose");
   const handleMenuOpen = () => {
     menu.style.display = "block";
