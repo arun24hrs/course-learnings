@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Student Registration Portal" />
+    <meta name="author" content="Arun Kr. Rana" />
+    <meta
+      name="description"
+      content="Welcome to the student registration portal where you will be able to add a student record and manage it very efficiently and also will ease. We have crafted this portal with keeping your needs in mind."
+    />
+    <meta
+      name="keywords"
+      content="Student Portal, Student Registration Portal, Student Management System, Management System, Management System for Teachers and Lecturers"
+    />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>Student Management Portal</title>
+</head>
+<body>
+    <header>
+        <h1>Student Registration Portal</h1>
+        <p>Register new students and manage existing records</p>
+    </header>
+    <section id="formSection">
+        <form id="studentForm">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Student Name" required>
+            
+            <label for="studentID">Student ID:</label>
+            <input type="number" id="studentID" name="studentID" placeholder="Enter Student ID" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter Student Email" required>
+            <br><br>
+            <label for="contact">Contact Number:</label>
+            <input type="number" id="contact" name="contact" placeholder="Enter Student Contact" required>
+            <br><br>
+            <button type="submit" id="submit-button">Register Student</button>
+        </form>
+    </section>
+    <section id="studentsList">
+        <h2>Registered Students</h2>
+        <div id="studentTable">
+            <!-- Student entries will be listed here -->
+           <table border="0">
+            <thead>
+                <th>Student Name</th>
+                <th>Student ID</th>
+                <th>Student Email</th>
+                <th>Student Contact</th>
+                <th>Actions</th>
+            </thead>
+            <tbody id="listOfStudents"></tbody>
+           </table>
+        </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
