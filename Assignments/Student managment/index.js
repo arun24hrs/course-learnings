@@ -1,4 +1,8 @@
+// Parsing Students data from localStorage
+
 let students = JSON.parse(localStorage.getItem("students")) || [];
+
+// Adding EventListener on submit of form
 
 document.getElementById("studentForm").addEventListener("submit", (event) => {
   event.preventDefault();
@@ -17,6 +21,7 @@ const studentContact = document.getElementById("contact");
 let editIndex = -1;
 
 const addStudent = () => {
+  // Basic contact validation
     if(studentContact.value <5999999999 || studentContact.value > 9999999999){
         window.alert("Enter a valid 10 digit contact number.");
         return;
@@ -28,6 +33,7 @@ const addStudent = () => {
     contact: studentContact.value,
   };
   
+  // Preventing duplicating of IDs
   for (student of students) {
       if (student.id == studentID.value) {
           window.alert("Student ID already present!");
@@ -42,14 +48,6 @@ const addStudent = () => {
 };
 
 const deleteStudentDetails = (id) => {
-    // let deleteID;
-    // for(let i=0; i<students.length; i++){
-    //     if(id==students[i].id){
-    //         deleteID=i;
-    //     }
-    // }
-    // console.log(deleteID);
-    // students.splice(deleteID,1);
 
     let newArray = students.filter((student)=>student.id!=id);
 
@@ -91,14 +89,15 @@ const showStudentData = () => {
   const tableBody = document.querySelector("tbody");
   tableBody.innerHTML = null;
   if (students.length == 0) {
-    const container = document.getElementById("studentTable");
+    // checking if data if present
+    const container = document.getElementById("listOfStudents");
     const message = document.createElement("p");
     message.innerText = "No Data Present Currently.";
     message.style.color = "red";
-    message.style.textAlign = "center";
-    container.appendChild = message;
-    console.log(container, message);
+    container.innerHTML = message.innerText;
+    
   } else {
+    // Appending data if student data is present
     students.forEach((student, index) => {
         const list = document.createElement("tr");
       const nameItem = document.createElement("td");
