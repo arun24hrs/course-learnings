@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: rgb(232, 232, 232);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: rgb(59, 110, 112);
+    color: #fff;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+#posts {
+    font-size: 18px;
+    font-weight: semi-bold;
+    padding: 20px;
+    width: 60%;
+    margin: auto;
+    background-color: rgb(249, 255, 212);
+    border-radius: 20px;
+}
