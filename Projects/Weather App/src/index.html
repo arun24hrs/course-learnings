@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Weather App" />
+  <meta name="author" content="Arun Kr. Rana" />
+  <meta name="description" content="Welcome to the Weather App. This is a user-friendly app that provide essential features such as
+      location-based forecasts, current weather conditions, and extended forecasts." />
+  <meta name="keywords" content="Passion, Blog, Learnings, Coding Lessons, Technology, Life lessons" />
+  <link href="output.css  " rel="stylesheet">
+  <title>Weather App</title>
+</head>
+
+<body class="bg-gray-200">
+
+  <div class="container mx-auto p-6">
+    <h1 class="text-4xl text-center font-bold mb-6 pb-4 lg:pb-8">Weather Forecast</h1>
+
+    <!-- Input section for search -->
+    <div class="flex justify-center mb-6 flex-col w-11/12 md:w-1/2 m-auto gap-3">
+      <input id="cityName" type="text" placeholder="Enter city name" class="border rounded p-2 md:w-full/4">
+      <button id="searchButton" class="bg-blue-500 text-white px-4 py-2 rounded">Get Weather</button>
+      <div class="flex items-center justify-around">
+        <div class="border-b-[1px] border-gray-400 h-[1px] w-[30%]"></div>
+        <p class="text-gray-500">OR</p>
+        <div class="border-b-[1px] border-gray-400 h-[1px] w-[30%]"></div>
+      </div>
+      <button id="currentLocationButton" class="bg-green-500 text-white px-4 py-2 rounded">Use Current Location</button>
+    </div>
+
+    <!-- Dropdown for recent cities -->
+    <div class="flex justify-center mb-6 flex-col">
+      <h3 class="md:w-2/4 m-auto py-1">Select from your recent search!</h3>
+      <select id="recentCities" class="border rounded p-2 md:w-2/4 m-auto">
+        <option value="">Select a recent city</option>
+      </select>
+    </div>
+
+    <!-- Weather display section -->
+    <h2 id="cityNameHeading" class="block text-xl mb-5"></h2>
+    <div id="showWeather" class="text-center text-xl font-medium"></div>
+    <div class="mapouter">
+      <div class="gmap_canvas"><iframe width="100%" height="300" id="gmap_canvas" frameborder="0" scrolling="no"
+          marginheight="0" marginwidth="0"></iframe><br>
+        <a href="https://www.embedgooglemap.net"></a>
+        
+      </div>
+    </div>
+
+    <!-- 5 Day Weather display section -->
+     <div id="5dayContainer">
+      
+     </div>
+
+
+  </div>
+
+
+  <!-- JavaScript file -->
+  <script src="index.js"></script>
+
+</body>
+
+</html>
