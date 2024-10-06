@@ -796,6 +796,12 @@ video {
   justify-content: space-around;
 }
 
+#forecastHeading {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 20px;
+}
+
 .forcastCard{
   display: flex;
   flex-direction: column;
@@ -849,6 +855,12 @@ video {
     flex-direction: column;
     width: 100%;
     gap: 30px;
+  }
+
+  #forecastHeading {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin: 70px auto 20px auto;
   }
 
   .forcastCard {

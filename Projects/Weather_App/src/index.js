@@ -158,7 +158,7 @@ const forcastShow = (data) => {
     // console.log("forcastttttt", forcast);
     let forcastHeading = document.createElement("h2");
     forcastHeading.innerText = `5 Day Forcast for ${cityName}`
-    forcastHeading.setAttribute("class", "block text-xl mb-5")
+    forcastHeading.setAttribute("id", "forecastHeading")
     // console.log("forcastttttt", forcast.length);
     let forcastCardContainer = document.createElement("div");
     forcastCardContainer.setAttribute("id", "forcastCardContainer");
