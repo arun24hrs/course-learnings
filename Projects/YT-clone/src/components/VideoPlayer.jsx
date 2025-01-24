@@ -13,7 +13,7 @@ const VideoPlayer = ({ match }) => {
 
   useEffect(() => {
     const fetchVideo = async () => {
-      const response = await axios.get(`https://www.googleapis.com/youtube/v3/videos?id=${params.id}&part=snippet,contentDetails&key=AIzaSyCI-JspbcIxKAFeFRS4GnSw168oWQ--zco`);
+      const response = await axios.get(`https://www.googleapis.com/youtube/v3/videos?id=${params.id}&part=snippet,contentDetails&key=AKAFeFRS4G68oWQ--zco`);
       setVideo(response.data.items[0]);
     };
     fetchVideo();
