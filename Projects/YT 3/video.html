@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        #logo {
+            width: 150px;
+        }
+        #avatar{
+            width: 50px;
+            border-radius: 50%;
+        }
+        #create {
+            width: 22px;
+        }
+        #notification {
+            width: 35px;
+        }
+        #createBox{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        #player {
+            text-align: center;
+        }
+        iframe {
+            height: 450px;
+            margin: auto;
+            margin-top: 50px;
+        }
+    </style>
+    <title id="title"></title>
+</head>
+<body>
+    <nav>
+        <div id="logoHolder">
+            <a href="index.html"><img src="YT logo.png" id="logo"></a>
+        </div>
+
+        <div id="createBox">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcdTptTgK7HPAZnx0Y6tkbqmYYnz0drKgxgvCaWIWucwmU_WEW6_v0Fqal2grQtoRP55Q&usqp=CAU" alt="" id="create">
+            <img src="https://cdn2.vectorstock.com/i/thumb-large/94/36/notification-bell-icon-inbox-message-vector-20579436.jpg" alt="" id="notification">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-sdWjJ3MVtWEFHlPvPNdSMkI1VqNd98udeQ&usqp=CAU" alt="" id="avatar">
+        </div>
+    </nav>
+    <div id="player"></div>
+</body>
+</html>
+<script src="video.js"></script>

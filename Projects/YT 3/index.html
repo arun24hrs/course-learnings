@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #btn {
+            width: 25px;
+            position: relative;
+            right: 30px;
+        }
+        #btn:hover{
+            cursor: pointer;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        #logo {
+            width: 150px;
+        }
+        #avatar{
+            width: 50px;
+            border-radius: 50%;
+        }
+        #create {
+            width: 22px;
+        }
+        #notification {
+            width: 35px;
+        }
+        #createBox{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        #searchBox{
+            display: flex;
+            align-items: center;
+            width: 50%;
+        }
+        #query {
+            width: 95%;
+            height: 25px;
+            font-size: 20px;
+        }
+        #searchResult{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            margin-top: 50px;
+        }
+        #searchResult>div>img{
+            width: 90%;
+        }
+
+    </style>
+    <title>YouTube</title>
+</head>
+<body>
+    <nav>
+        <div id="logoHolder">
+            <img src="YT logo.png" id="logo">
+        </div>
+        <div id="searchBox">
+            <input type="text" id="query">
+            <img src="https://png.pngitem.com/pimgs/s/519-5195951_search-icon-small-png-clipart-png-download-search.png" id="btn">
+        </div>
+        <div id="createBox">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcdTptTgK7HPAZnx0Y6tkbqmYYnz0drKgxgvCaWIWucwmU_WEW6_v0Fqal2grQtoRP55Q&usqp=CAU" alt="" id="create">
+            <img src="https://cdn2.vectorstock.com/i/thumb-large/94/36/notification-bell-icon-inbox-message-vector-20579436.jpg" alt="" id="notification">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-sdWjJ3MVtWEFHlPvPNdSMkI1VqNd98udeQ&usqp=CAU" alt="" id="avatar">
+        </div>
+    </nav>
+    <select id="duration">
+        <option value="Sort by Duration">Sort by Duration</option>
+        <option value="fourMin">Under 4 minutes</option>
+        <option value="tillTwenty">4-20 minutes</option>
+        <option value="overMin">Over 20 minutes</option>
+    </select>
+    <select id="date">
+        <option value="Sort by Date">Sort by Date</option>
+        <option value="hour">Last Hour</option>
+        <option value="thisWeek">This week</option>
+        <option value="thisMonth">This month</option>
+        <option value="thisYear">This year</option>
+    </select>
+
+    <div id="searchResult">
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
