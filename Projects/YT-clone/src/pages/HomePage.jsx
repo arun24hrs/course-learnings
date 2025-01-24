@@ -10,7 +10,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=programming&type=video&key=AIzaSyCI-JspbcIxKAFeFRS4GnSw168oWQ--zco`);
+        const response = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=programming&type=video&key=AIzaSw168oWQ--zco`);
         console.log(response)
         setVideos(response.data.items);
       } catch (error) {
